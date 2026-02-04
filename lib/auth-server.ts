@@ -1,19 +1,23 @@
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
-type SessionPayload = {
-  data?: {
-    user?: {
-      id?: string;
-      name?: string | null;
-      email?: string | null;
-      image?: string | null;
-    } | null;
-    session?: Record<string, unknown> | null;
+export type SessionData = {
+  user?: {
+    id?: string;
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
   } | null;
+  session?: Record<string, unknown> | null;
 };
 
-export async function getServerSession() {
+type SessionPayload = {
+  data?: SessionData | null;
+  session?: SessionData["session"] | null;
+  user?: SessionData["user"] | null;
+};
+
+export async function getServerSession(): Promise<SessionData | null> {
   const headerStore = await headers();
   const cookieHeader = headerStore.get("cookie") ?? "";
 
