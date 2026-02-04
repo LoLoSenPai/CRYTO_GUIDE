@@ -1,9 +1,9 @@
-import type { Lesson, Track } from "@/lib/content.fr";
+import type { Lesson, Track, QuizQuestion } from "@/lib/content.fr";
 import { getLesson as getLessonFr, getLessonsByTrack as getLessonsByTrackFr, lessons as lessonsFr, tracks as tracksFr } from "@/lib/content.fr";
 import { getLesson as getLessonEn, getLessonsByTrack as getLessonsByTrackEn, lessons as lessonsEn, tracks as tracksEn } from "@/lib/content.en";
 import type { Locale } from "@/i18n.config";
 
-export type { Lesson, Track };
+export type { Lesson, Track, QuizQuestion };
 
 const byLocale = (locale: Locale) => (locale === "en" ? {
   lessons: lessonsEn,
