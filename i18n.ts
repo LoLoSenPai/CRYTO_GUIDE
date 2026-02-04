@@ -3,7 +3,7 @@ import { defaultLocale, locales } from "./i18n.config";
 
 export default getRequestConfig(async ({ locale }) => {
   const resolvedLocale = locales.includes(locale as any)
-    ? locale
+    ? (locale as string)
     : defaultLocale;
 
   return {
