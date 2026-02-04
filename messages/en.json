@@ -1,0 +1,229 @@
+﻿{
+    "nav":  {
+                "brand":  "Crypto Guide",
+                "tagline":  "Learn without noise",
+                "tracks":  "Tracks",
+                "profile":  "Profile",
+                "tools":  "Tools",
+                "manifesto":  "Manifesto",
+                "auth":  "Sign in",
+                "authCta":  "Sign in",
+                "signOut":  "Sign out",
+                "signedIn":  "Signed in",
+                "account":  "Account",
+                "cta":  "Start"
+            },
+    "hero":  {
+                 "pill":  "No jargon. No hype.",
+                 "title":  "A clear guide to understand crypto,",
+                 "titleEmph":  "not just trade it.",
+                 "desc":  "Short tracks, quick quizzes and concrete missions to start safely. You move at your pace, with saved progress.",
+                 "ctaPrimary":  "Choose a track",
+                 "ctaSecondary":  "Read the manifesto",
+                 "stats":  [
+                               {
+                                   "label":  "5-10 min",
+                                   "value":  "per module"
+                               },
+                               {
+                                   "label":  "Quizzes",
+                                   "value":  "to validate"
+                               },
+                               {
+                                   "label":  "Zero noise",
+                                   "value":  "clarity first"
+                               }
+                           ],
+                 "preview":  "Preview",
+                 "track":  "Basic",
+                 "moduleHint":  "Quiz + mission",
+                 "previewList":  [
+                                     "Why blockchain",
+                                     "Wallets 101",
+                                     "CEX vs DEX",
+                                     "Security",
+                                     "First transaction"
+                                 ],
+                 "courseTitle":  "Crypto Foundations"
+             },
+    "home":  {
+                 "cards":  [
+                               {
+                                   "title":  "Clear track",
+                                   "desc":  "Two levels to move forward without getting lost."
+                               },
+                               {
+                                   "title":  "Quick quizzes",
+                                   "desc":  "Validate the basics before moving on."
+                               },
+                               {
+                                   "title":  "Useful missions",
+                                   "desc":  "Concrete actions, no useless theory."
+                               }
+                           ],
+                 "ready":  "Ready to start?",
+                 "readyDesc":  "Choose your track and move at your own pace.",
+                 "cta":  "View tracks",
+                 "footer":  "Crypto Guide — Education, not financial advice."
+             },
+    "tracks":  {
+                   "title":  "Choose your track",
+                   "desc":  "Basic to start safely. Advanced to explore the ecosystem."
+               },
+    "about":  {
+                  "title":  "The manifesto",
+                  "intro":  "Here we focus on usefulness and clarity. No hype, no pressure. Just the essentials to help a friend understand crypto without getting lost.",
+                  "points":  [
+                                 "Understand before buying.",
+                                 "Know where the risks are.",
+                                 "Move one step at a time.",
+                                 "Build a long-term relationship with the technology."
+                             ],
+                  "transparency":  "Transparency: some missions may include affiliate links. It\u0027s always optional and clearly indicated.",
+                  "principle":  "Principle"
+              },
+    "resources":  {
+                      "title":  "Useful tools",
+                      "desc":  "A short list to avoid overload. You can enrich it over time.",
+                      "sections":  [
+                                       {
+                                           "title":  "Non-custodial wallets",
+                                           "items":  [
+                                                         "Phantom",
+                                                         "Solflare",
+                                                         "Backpack"
+                                                     ],
+                                           "note":  "Start with a trusted wallet and always verify the URL."
+                                       },
+                                       {
+                                           "title":  "CEX (centralized platforms)",
+                                           "items":  [
+                                                         "Binance",
+                                                         "Coinbase",
+                                                         "Kraken"
+                                                     ],
+                                           "note":  "Enable 2FA and use a unique password."
+                                       },
+                                       {
+                                           "title":  "DEX and on-chain tools",
+                                           "items":  [
+                                                         "Jupiter",
+                                                         "Raydium",
+                                                         "Solana Explorer"
+                                                     ],
+                                           "note":  "Test with a small amount before going further."
+                                       }
+                                   ],
+                      "footer":  "This site is educational and not financial advice."
+                  },
+    "lesson":  {
+                   "back":  "← Back to track",
+                   "step":  "Step",
+                   "mission":  "Mission"
+               },
+    "quiz":  {
+                 "label":  "Quiz",
+                 "validate":  "Submit",
+                 "correct":  "Correct",
+                 "retry":  "Try again",
+                 "progressTitle":  "Module progress",
+                 "progressReady":  "Quiz validated. You can finish the lesson.",
+                 "progressPending":  "Validate all quizzes to continue.",
+                 "finish":  "Finish",
+                 "done":  "Module finished. Go back to the track to see your progress.",
+                 "xpCorrect":  "+10 XP for the correct answer",
+                 "xpLesson":  "Lesson completed: +40 XP",
+                 "badgeUnlocked":  "Badge unlocked: {title}"
+             },
+    "progress":  {
+                     "title":  "Progress",
+                     "completed":  "{count}/{total}",
+                     "percent":  "{percent}% completed"
+                 },
+    "profile":  {
+                    "title":  "Profile",
+                    "desc":  "Track your progress, badges and streak.",
+                    "shareTitle":  "Share your profile",
+                    "shareDesc":  "Choose a handle and generate a public share link.",
+                    "save":  "Save",
+                    "preview":  "Preview",
+                    "copy":  "Copy link",
+                    "shared":  "Copied",
+                    "shareX":  "Share on X",
+                    "stats":  {
+                                  "level":  "Level",
+                                  "xp":  "XP",
+                                  "lessons":  "Lessons",
+                                  "badges":  "Badges",
+                                  "streak":  "Streak"
+                              },
+                    "progressTitle":  "Progress",
+                    "xpTotal":  "Total XP",
+                    "lessonsDone":  "Lessons completed",
+                    "noLessons":  "No lessons completed yet.",
+                    "badgesTitle":  "Badges",
+                    "badgesDesc":  "Unlock badges as you progress.",
+                    "badgeLocked":  "Locked",
+                    "badgeUnlocked":  "Unlocked",
+                    "tip":  "Tip: a bit of activity each day helps keep your streak.",
+                    "handlePlaceholder":  "Handle",
+                    "anonymous":  "Anonymous",
+                    "tweet":  "I am progressing on Crypto Guide: level {level}, {lessons} lessons completed.",
+                    "linkPending":  "Link preparing..."
+                },
+    "share":  {
+                  "title":  "Public profile",
+                  "desc":  "Public snapshot of progress — no sensitive data.",
+                  "highlight":  "Badge highlight:",
+                  "noBadge":  "—",
+                  "noPublicBadges":  "No public badges yet.",
+                  "safe":  "This profile contains no sensitive data.",
+                  "cta":  "Discover the guide",
+                  "anonymous":  "Anonymous"
+              },
+    "auth":  {
+                 "eyebrow":  "Get started",
+                 "title":  "Sign in to save your progress",
+                 "desc":  "Create your streak, keep your badges, and pick up where you left off.",
+                 "privacy":  "We only use your email to sign you in. No spam.",
+                 "magicLabel":  "Email link",
+                 "magicTitle":  "Magic link, zero password",
+                 "magicDesc":  "Receive a secure link by email to sign in instantly.",
+                 "emailPlaceholder":  "you@example.com",
+                 "magicCta":  "Send link",
+                 "socialLabel":  "Social",
+                 "socialTitle":  "Continue with Google",
+                 "socialDesc":  "One click, no extra account to remember.",
+                 "googleCta":  "Continue with Google",
+                 "sent":  "Magic link sent. Check your inbox.",
+                 "loading":  "Checking session…",
+                 "signedIn":  "Signed in",
+                 "signOut":  "Sign out",
+                 "anonymous":  "Anonymous",
+                 "tip":  "Tip: you can still explore the site without signing in.",
+                 "errors":  {
+                                "magic":  "We could not send the link. Try again.",
+                                "google":  "Google sign-in failed. Try again."
+                            }
+             },
+    "account":  {
+                    "eyebrow":  "Account",
+                    "title":  "Your account",
+                    "desc":  "Manage your session and account details.",
+                    "anonymous":  "Anonymous",
+                    "noEmail":  "No email available",
+                    "provider":  "Provider",
+                    "providerUnknown":  "Unknown",
+                    "status":  "Status",
+                    "statusValue":  "Active session",
+                    "signOut":  "Sign out"
+                },
+    "common":  {
+                   "completed":  "Completed",
+                   "advanced":  "Advanced",
+                   "basic":  "Basic",
+                   "todo":  "To do",
+                   "viewTrack":  "View track",
+                   "quizCount":  "{count} quizzes"
+               }
+}

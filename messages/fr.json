@@ -1,0 +1,229 @@
+﻿{
+    "nav":  {
+                "brand":  "Crypto Guide",
+                "tagline":  "Apprendre sans bruit",
+                "tracks":  "Parcours",
+                "profile":  "Profil",
+                "tools":  "Outils",
+                "manifesto":  "Manifeste",
+                "auth":  "Connexion",
+                "authCta":  "Connexion",
+                "signOut":  "Se déconnecter",
+                "signedIn":  "Connecté",
+                "account":  "Compte",
+                "cta":  "Commencer"
+            },
+    "hero":  {
+                 "pill":  "Sans jargon. Sans hype.",
+                 "title":  "Un guide clair pour comprendre la crypto,",
+                 "titleEmph":  "pas seulement la trader.",
+                 "desc":  "Des parcours courts, des quiz rapides et des missions concrètes pour démarrer en sécurité. Tu avances à ton rythme, avec une progression sauvegardée.",
+                 "ctaPrimary":  "Choisir un parcours",
+                 "ctaSecondary":  "Lire le manifeste",
+                 "stats":  [
+                               {
+                                   "label":  "5-10 min",
+                                   "value":  "par module"
+                               },
+                               {
+                                   "label":  "Quiz",
+                                   "value":  "pour valider"
+                               },
+                               {
+                                   "label":  "Zéro bruit",
+                                   "value":  "priorité compréhension"
+                               }
+                           ],
+                 "preview":  "Aperçu",
+                 "track":  "Basique",
+                 "moduleHint":  "Quiz + mission",
+                 "previewList":  [
+                                     "Pourquoi la blockchain",
+                                     "Wallets 101",
+                                     "CEX vs DEX",
+                                     "Sécurité",
+                                     "Première transaction"
+                                 ],
+                 "courseTitle":  "Fondations Crypto"
+             },
+    "home":  {
+                 "cards":  [
+                               {
+                                   "title":  "Parcours clair",
+                                   "desc":  "Deux niveaux pour avancer sans se perdre."
+                               },
+                               {
+                                   "title":  "Quiz rapides",
+                                   "desc":  "Valide les bases avant de passer à l\u0027étape suivante."
+                               },
+                               {
+                                   "title":  "Missions utiles",
+                                   "desc":  "Des actions concrètes, pas de théorie inutile."
+                               }
+                           ],
+                 "ready":  "Prêt à démarrer ?",
+                 "readyDesc":  "Choisis ton parcours et avance à ton rythme.",
+                 "cta":  "Voir les parcours",
+                 "footer":  "Crypto Guide — Éducation, pas de conseils financiers."
+             },
+    "tracks":  {
+                   "title":  "Choisis ton parcours",
+                   "desc":  "Basique pour démarrer en sécurité. Avancé pour explorer l\u0027écosystème."
+               },
+    "about":  {
+                  "title":  "Le manifeste",
+                  "intro":  "Ici, on parle d\u0027utilité et de clarté. Pas de hype, pas de pression. Juste l\u0027essentiel pour aider un ami à comprendre la crypto sans se perdre.",
+                  "points":  [
+                                 "Comprendre avant d\u0027acheter.",
+                                 "Savoir où sont les risques.",
+                                 "Faire un pas à la fois.",
+                                 "Construire une relation long terme avec la technologie."
+                             ],
+                  "transparency":  "Transparence: certaines missions peuvent contenir des liens affiliés. C\u0027est toujours optionnel et clairement indiqué.",
+                  "principle":  "Principe"
+              },
+    "resources":  {
+                      "title":  "Outils utiles",
+                      "desc":  "Une sélection courte pour éviter la surcharge. Tu peux enrichir cette liste au fil du temps.",
+                      "sections":  [
+                                       {
+                                           "title":  "Wallets non-custodial",
+                                           "items":  [
+                                                         "Phantom",
+                                                         "Solflare",
+                                                         "Backpack"
+                                                     ],
+                                           "note":  "Commence par un wallet reconnu et vérifie toujours l\u0027URL."
+                                       },
+                                       {
+                                           "title":  "CEX (plateformes centralisées)",
+                                           "items":  [
+                                                         "Binance",
+                                                         "Coinbase",
+                                                         "Kraken"
+                                                     ],
+                                           "note":  "Active le 2FA et utilise un mot de passe unique."
+                                       },
+                                       {
+                                           "title":  "DEX et outils on-chain",
+                                           "items":  [
+                                                         "Jupiter",
+                                                         "Raydium",
+                                                         "Solana Explorer"
+                                                     ],
+                                           "note":  "Teste avec une petite somme avant d\u0027aller plus loin."
+                                       }
+                                   ],
+                      "footer":  "Ce site est éducatif et ne constitue pas un conseil financier."
+                  },
+    "lesson":  {
+                   "back":  "← Retour au parcours",
+                   "step":  "Étape",
+                   "mission":  "Mission"
+               },
+    "quiz":  {
+                 "label":  "Quiz",
+                 "validate":  "Valider",
+                 "correct":  "Bonne réponse",
+                 "retry":  "Réessaie",
+                 "progressTitle":  "Progression du module",
+                 "progressReady":  "Quiz validé. Tu peux terminer la leçon.",
+                 "progressPending":  "Valide tous les quiz pour continuer.",
+                 "finish":  "Terminer",
+                 "done":  "Module terminé. Retourne au parcours pour voir ta progression.",
+                 "xpCorrect":  "+10 XP pour la bonne réponse",
+                 "xpLesson":  "Leçon terminée : +40 XP",
+                 "badgeUnlocked":  "Badge débloqué : {title}"
+             },
+    "progress":  {
+                     "title":  "Progression",
+                     "completed":  "{count}/{total}",
+                     "percent":  "{percent}% complété"
+                 },
+    "profile":  {
+                    "title":  "Profil",
+                    "desc":  "Suis ta progression, tes badges et ta série.",
+                    "shareTitle":  "Partager ton profil",
+                    "shareDesc":  "Choisis un pseudo et génère un lien public partageable.",
+                    "save":  "Sauvegarder",
+                    "preview":  "Aperçu",
+                    "copy":  "Copier le lien",
+                    "shared":  "Copié",
+                    "shareX":  "Partager sur X",
+                    "stats":  {
+                                  "level":  "Niveau",
+                                  "xp":  "XP",
+                                  "lessons":  "Leçons",
+                                  "badges":  "Badges",
+                                  "streak":  "Série"
+                              },
+                    "progressTitle":  "Progression",
+                    "xpTotal":  "XP total",
+                    "lessonsDone":  "Leçons terminées",
+                    "noLessons":  "Aucune leçon terminée pour le moment.",
+                    "badgesTitle":  "Badges",
+                    "badgesDesc":  "Débloque des badges en progressant.",
+                    "badgeLocked":  "Verrouillé",
+                    "badgeUnlocked":  "Débloqué",
+                    "tip":  "Astuce: une petite activité chaque jour aide à maintenir la série.",
+                    "handlePlaceholder":  "Pseudo",
+                    "anonymous":  "Anonyme",
+                    "tweet":  "Je progresse sur Crypto Guide : niveau {level}, {lessons} leçons terminées.",
+                    "linkPending":  "Lien en préparation..."
+                },
+    "share":  {
+                  "title":  "Profil public",
+                  "desc":  "Aperçu public de la progression — pas de données sensibles.",
+                  "highlight":  "Badge highlight:",
+                  "noBadge":  "—",
+                  "noPublicBadges":  "Aucun badge public pour le moment.",
+                  "safe":  "Ce profil ne contient aucune donnée sensible.",
+                  "cta":  "Découvrir le guide",
+                  "anonymous":  "Anonyme"
+              },
+    "auth":  {
+                 "eyebrow":  "Commencer",
+                 "title":  "Connecte-toi pour sauvegarder ta progression",
+                 "desc":  "Garde ta série, tes badges et reprends exactement où tu t'es arrêté.",
+                 "privacy":  "On utilise ton email uniquement pour te connecter. Pas de spam.",
+                 "magicLabel":  "Lien email",
+                 "magicTitle":  "Magic link, zéro mot de passe",
+                 "magicDesc":  "Reçois un lien sécurisé par email pour te connecter.",
+                 "emailPlaceholder":  "toi@example.com",
+                 "magicCta":  "Envoyer le lien",
+                 "socialLabel":  "Réseaux",
+                 "socialTitle":  "Continuer avec Google",
+                 "socialDesc":  "Un clic, rien à retenir.",
+                 "googleCta":  "Continuer avec Google",
+                 "sent":  "Lien envoyé. Regarde ta boîte mail.",
+                 "loading":  "Vérification de session…",
+                 "signedIn":  "Connecté",
+                 "signOut":  "Se déconnecter",
+                 "anonymous":  "Anonyme",
+                 "tip":  "Astuce : tu peux explorer le site sans te connecter.",
+                 "errors":  {
+                                "magic":  "Impossible d'envoyer le lien. Réessaie.",
+                                "google":  "Connexion Google impossible. Réessaie."
+                            }
+             },
+    "account":  {
+                    "eyebrow":  "Compte",
+                    "title":  "Ton compte",
+                    "desc":  "Gère ta session et tes informations.",
+                    "anonymous":  "Anonyme",
+                    "noEmail":  "Aucun email disponible",
+                    "provider":  "Fournisseur",
+                    "providerUnknown":  "Inconnu",
+                    "status":  "Statut",
+                    "statusValue":  "Session active",
+                    "signOut":  "Se déconnecter"
+                },
+    "common":  {
+                   "completed":  "Terminé",
+                   "advanced":  "Avancé",
+                   "basic":  "Basique",
+                   "todo":  "À faire",
+                   "viewTrack":  "Voir le parcours",
+                   "quizCount":  "{count} quiz"
+               }
+}
