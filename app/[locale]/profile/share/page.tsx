@@ -29,22 +29,22 @@ export default async function SharePage({
   const t = await getTranslations({ locale, namespace: "share" });
   const tp = await getTranslations({ locale, namespace: "profile" });
   const badges = getBadges(locale as Locale);
-  const params = await searchParams;
-  const name = typeof params.name === "string" ? params.name : t("anonymous");
-  const xp = parseNumber(typeof params.xp === "string" ? params.xp : undefined);
+  const query = await searchParams;
+  const name = typeof query.name === "string" ? query.name : t("anonymous");
+  const xp = parseNumber(typeof query.xp === "string" ? query.xp : undefined);
   const level = parseNumber(
-    typeof params.level === "string" ? params.level : undefined,
+    typeof query.level === "string" ? query.level : undefined,
     1
   );
   const streak = parseNumber(
-    typeof params.streak === "string" ? params.streak : undefined
+    typeof query.streak === "string" ? query.streak : undefined
   );
   const lessons = parseNumber(
-    typeof params.lessons === "string" ? params.lessons : undefined
+    typeof query.lessons === "string" ? query.lessons : undefined
   );
   const badgeIds =
-    typeof params.badges === "string"
-      ? params.badges.split(",").filter(Boolean)
+    typeof query.badges === "string"
+      ? query.badges.split(",").filter(Boolean)
       : [];
   const badgeList = badges.filter((badge) => badgeIds.includes(badge.id));
 
