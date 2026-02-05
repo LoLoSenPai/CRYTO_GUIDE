@@ -1,5 +1,4 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import TopNav from "@/components/TopNav";
 
 export default async function ResourcesPage({
   params
@@ -17,7 +16,6 @@ export default async function ResourcesPage({
 
   return (
     <main>
-      <TopNav />
       <section className="mx-auto mt-16 w-[92%] max-w-5xl">
         <h1 className="font-display text-3xl text-sand-200">{t("title")}</h1>
         <p className="mt-2 text-sand-300">{t("desc")}</p>

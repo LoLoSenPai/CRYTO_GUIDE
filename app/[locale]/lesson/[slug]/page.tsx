@@ -1,7 +1,6 @@
 import { Link } from "@/navigation";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import TopNav from "@/components/TopNav";
 import Quiz from "@/components/Quiz";
 import { getLesson } from "@/lib/content";
 import type { Locale } from "@/i18n.config";
@@ -21,7 +20,6 @@ export default async function LessonPage({
 
   return (
     <main>
-      <TopNav />
       <section className="mx-auto mt-14 w-[92%] max-w-4xl">
         <Link
           href={`/track/${lesson.track}`}

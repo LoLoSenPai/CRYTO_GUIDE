@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/navigation";
 import Hero from "@/components/Hero";
-import TopNav from "@/components/TopNav";
 
 export default async function Home({
   params
@@ -16,7 +15,6 @@ export default async function Home({
 
   return (
     <main>
-      <TopNav />
       <Hero />
       <section className="mx-auto mt-20 w-[92%] max-w-6xl">
         <div className="grid gap-6 md:grid-cols-3">

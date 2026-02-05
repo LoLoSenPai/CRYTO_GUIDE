@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
-import TopNav from "@/components/TopNav";
 import LessonGrid from "@/components/LessonGrid";
 import ProgressSummary from "@/components/ProgressSummary";
 import GamificationPanel from "@/components/GamificationPanel";
@@ -23,7 +22,6 @@ export default async function TrackPage({
 
   return (
     <main>
-      <TopNav />
       <section className="mx-auto mt-16 w-[92%] max-w-6xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
           <div>

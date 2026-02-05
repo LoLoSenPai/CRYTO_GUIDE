@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n.config";
+import TopNav from "@/components/TopNav";
 
 export default async function LocaleLayout({
   children,
@@ -19,6 +20,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <TopNav />
       {children}
     </NextIntlClientProvider>
   );

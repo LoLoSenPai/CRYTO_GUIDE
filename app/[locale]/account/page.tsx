@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { redirect } from "next/navigation";
-import TopNav from "@/components/TopNav";
 import { getServerSession, getUserAccounts } from "@/lib/auth-server";
 
 export const dynamic = "force-dynamic";
@@ -35,7 +34,6 @@ export default async function AccountPage({
 
   return (
     <main>
-      <TopNav />
       <section className="mx-auto mt-16 w-[92%] max-w-4xl">
         <p className="text-xs uppercase tracking-[0.4em] text-sand-400">
           {t("eyebrow")}

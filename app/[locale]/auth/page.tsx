@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import AuthForm from "@/components/AuthForm";
-import TopNav from "@/components/TopNav";
 
 export default async function AuthPage({
   params
@@ -13,7 +12,6 @@ export default async function AuthPage({
 
   return (
     <main>
-      <TopNav />
       <div className="mx-auto w-[92%] max-w-6xl pb-20 pt-12">
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">

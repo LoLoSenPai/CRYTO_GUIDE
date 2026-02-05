@@ -1,6 +1,5 @@
 import { Link } from "@/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import TopNav from "@/components/TopNav";
 import { getBadges } from "@/lib/gamification";
 import { getServerSession } from "@/lib/auth-server";
 import type { Locale } from "@/i18n.config";
@@ -50,7 +49,6 @@ export default async function SharePage({
 
   return (
     <main>
-      <TopNav />
       <section className="mx-auto mt-16 w-[92%] max-w-4xl">
         <div className="signature-card rounded-[28px] p-[1px]">
           <div className="signature-inner rounded-[26px] px-6 py-7">

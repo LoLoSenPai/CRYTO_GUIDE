@@ -45,7 +45,12 @@ export default function TopNav() {
       </nav>
       <div className="flex items-center gap-3">
         <LocaleSwitch />
-        {loading ? null : user ? (
+        {loading ? (
+          <>
+            <div className="hidden h-8 w-24 rounded-full border border-white/10 bg-white/5 md:block" />
+            <div className="h-8 w-20 rounded-full bg-teal-400/40" />
+          </>
+        ) : user ? (
           <>
             <div className="relative hidden md:block">
               <button
