@@ -87,30 +87,18 @@
                       "desc":  "A short list to avoid overload. You can enrich it over time.",
                       "sections":  [
                                        {
+                                           "id":  "wallets",
                                            "title":  "Non-custodial wallets",
-                                           "items":  [
-                                                         "Phantom",
-                                                         "Solflare",
-                                                         "Backpack"
-                                                     ],
                                            "note":  "Start with a trusted wallet and always verify the URL."
                                        },
                                        {
+                                           "id":  "cex",
                                            "title":  "CEX (centralized platforms)",
-                                           "items":  [
-                                                         "Binance",
-                                                         "Coinbase",
-                                                         "Kraken"
-                                                     ],
                                            "note":  "Enable 2FA and use a unique password."
                                        },
                                        {
+                                           "id":  "dex",
                                            "title":  "DEX and on-chain tools",
-                                           "items":  [
-                                                         "Jupiter",
-                                                         "Raydium",
-                                                         "Solana Explorer"
-                                                     ],
                                            "note":  "Test with a small amount before going further."
                                        }
                                    ],

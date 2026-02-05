@@ -87,30 +87,18 @@
                       "desc":  "Une sélection courte pour éviter la surcharge. Tu peux enrichir cette liste au fil du temps.",
                       "sections":  [
                                        {
+                                           "id":  "wallets",
                                            "title":  "Wallets non-custodial",
-                                           "items":  [
-                                                         "Phantom",
-                                                         "Solflare",
-                                                         "Backpack"
-                                                     ],
                                            "note":  "Commence par un wallet reconnu et vérifie toujours l\u0027URL."
                                        },
                                        {
+                                           "id":  "cex",
                                            "title":  "CEX (plateformes centralisées)",
-                                           "items":  [
-                                                         "Binance",
-                                                         "Coinbase",
-                                                         "Kraken"
-                                                     ],
                                            "note":  "Active le 2FA et utilise un mot de passe unique."
                                        },
                                        {
+                                           "id":  "dex",
                                            "title":  "DEX et outils on-chain",
-                                           "items":  [
-                                                         "Jupiter",
-                                                         "Raydium",
-                                                         "Solana Explorer"
-                                                     ],
                                            "note":  "Teste avec une petite somme avant d\u0027aller plus loin."
                                        }
                                    ],

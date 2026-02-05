@@ -1,4 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { HoverLinkPreview } from "@/components/ui/hover-link-preview";
+import { getResources } from "@/lib/content";
+import type { Locale } from "@/i18n.config";
 
 export default async function ResourcesPage({
   params
@@ -9,10 +12,14 @@ export default async function ResourcesPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "resources" });
   const sections = t.raw("sections") as {
+    id: string;
     title: string;
-    items: string[];
     note: string;
   }[];
+  const resources = getResources(locale as Locale);
+  const resourcesById = Object.fromEntries(
+    (resources ?? []).map((section) => [section.id, section.items])
+  );
 
   return (
     <main>
@@ -21,14 +28,25 @@ export default async function ResourcesPage({
         <p className="mt-2 text-sand-300">{t("desc")}</p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {sections.map((section) => (
-            <div key={section.title} className="glass rounded-3xl p-5 shadow-glow">
+            <div key={section.title} className="glass rounded-3xl p-7 shadow-glow">
               <h3 className="font-display text-xl text-sand-200">
                 {section.title}
               </h3>
               <ul className="mt-3 space-y-2 text-sm text-sand-300">
-                {section.items.map((item) => (
-                  <li key={item} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
-                    {item}
+                {(resourcesById[section.id] ?? []).map((item) => (
+                  <li
+                    key={item.id}
+                    className="rounded-xl border border-white/10 bg-white/5 px-3 py-2"
+                  >
+                    <HoverLinkPreview
+                      href={item.linkWebsite}
+                      previewImage={item.linkPreview || "/previews/placeholder.svg"}
+                      imageAlt={item.label}
+                    >
+                      <span className="text-sand-200 hover:text-white">
+                        {item.label}
+                      </span>
+                    </HoverLinkPreview>
                   </li>
                 ))}
               </ul>

@@ -36,6 +36,18 @@ export type Track = {
   lessons: string[];
 };
 
+export type ResourceItem = {
+  id: string;
+  label: string;
+  linkWebsite: string;
+  linkPreview: string;
+};
+
+export type ResourceSection = {
+  id: string;
+  items: ResourceItem[];
+};
+
 export const tracks: Track[] = [
   {
     id: "basic",
@@ -359,3 +371,75 @@ export const getLesson = (slug: string) =>
 
 export const getLessonsByTrack = (trackId: Track["id"]) =>
   lessons.filter((lesson) => lesson.track === trackId);
+
+export const resources: ResourceSection[] = [
+  {
+    id: "wallets",
+    items: [
+      {
+        id: "phantom",
+        label: "Phantom",
+        linkWebsite: "https://phantom.app",
+        linkPreview: "/previews/phantom.webp"
+      },
+      {
+        id: "solflare",
+        label: "Solflare",
+        linkWebsite: "https://solflare.com",
+        linkPreview: "/previews/solflare.webp"
+      },
+      {
+        id: "backpack",
+        label: "Backpack",
+        linkWebsite: "https://backpack.app",
+        linkPreview: "/previews/backpack.webp"
+      }
+    ]
+  },
+  {
+    id: "cex",
+    items: [
+      {
+        id: "binance",
+        label: "Binance",
+        linkWebsite: "https://www.binance.com",
+        linkPreview: "/previews/binance.webp"
+      },
+      {
+        id: "coinbase",
+        label: "Coinbase",
+        linkWebsite: "https://www.coinbase.com",
+        linkPreview: "/previews/coinbase.webp"
+      },
+      {
+        id: "kraken",
+        label: "Kraken",
+        linkWebsite: "https://www.kraken.com",
+        linkPreview: "/previews/kraken.webp"
+      }
+    ]
+  },
+  {
+    id: "dex",
+    items: [
+      {
+        id: "jupiter",
+        label: "Jupiter",
+        linkWebsite: "https://jup.ag",
+        linkPreview: "/previews/jupiter.webp"
+      },
+      {
+        id: "raydium",
+        label: "Raydium",
+        linkWebsite: "https://raydium.io",
+        linkPreview: "/previews/raydium.webp"
+      },
+      {
+        id: "solana-explorer",
+        label: "Solana Explorer",
+        linkWebsite: "https://explorer.solana.com",
+        linkPreview: "/previews/solana-explorer.webp"
+      }
+    ]
+  }
+];
