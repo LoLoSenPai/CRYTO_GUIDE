@@ -119,9 +119,27 @@
                  "progressPending":  "Validate all quizzes to continue.",
                  "finish":  "Finish",
                  "done":  "Module finished. Go back to the track to see your progress.",
+                 "recapTitle":  "Recap",
+                 "recapScore":  "Score: {correct}/{total} correct",
+                 "recapNext":  "Next steps",
+                 "recapBackTrack":  "Back to track",
+                 "recapNextLesson":  "Next lesson: {title}",
+                 "recapStatXp":  "Total XP",
+                 "recapStatBadges":  "Badges",
+                 "recapStatStreak":  "Streak",
+                 "recapBadgesTitle":  "Badges unlocked",
                  "xpCorrect":  "+10 XP for the correct answer",
                  "xpLesson":  "Lesson completed: +40 XP",
-                 "badgeUnlocked":  "Badge unlocked: {title}"
+                 "badgeUnlocked":  "Badge unlocked: {title}",
+                 "trick":  "Trick question",
+                 "kind":  {
+                              "boolean":  "True/False"
+                          },
+                 "difficulty":  {
+                                    "easy":  "Easy",
+                                    "medium":  "Medium",
+                                    "hard":  "Hard"
+                                }
              },
     "progress":  {
                      "title":  "Progress",

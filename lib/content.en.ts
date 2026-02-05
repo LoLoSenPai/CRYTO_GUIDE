@@ -1,4 +1,4 @@
-﻿export type QuizChoice = {
+export type QuizChoice = {
   id: string;
   label: string;
   correct?: boolean;
@@ -7,6 +7,9 @@
 export type QuizQuestion = {
   id: string;
   prompt: string;
+  difficulty?: "easy" | "medium" | "hard";
+  kind?: "standard" | "boolean";
+  trick?: boolean;
   choices: QuizChoice[];
   explanation: string;
 };
@@ -108,6 +111,43 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "The core of a public blockchain is a shared ledger verifiable by anyone."
+      },
+      {
+        id: "q2",
+        prompt: "Public blockchains are transparent for everyone.",
+        kind: "boolean",
+        choices: [
+          { id: "a", label: "True", correct: true },
+          { id: "b", label: "False" }
+        ],
+        explanation:
+          "Anyone can verify transactions on a public blockchain."
+      },
+      {
+        id: "q3",
+        prompt: "What is a practical benefit of a blockchain?",
+        choices: [
+          { id: "a", label: "More middlemen and higher friction." },
+          {
+            id: "b",
+            label: "Less friction and better verifiability.",
+            correct: true
+          },
+          { id: "c", label: "No need to verify anything." }
+        ],
+        explanation:
+          "The real gain is lower friction and better verifiability."
+      },
+      {
+        id: "q4",
+        prompt: "Who can verify transactions on a public blockchain?",
+        choices: [
+          { id: "a", label: "Only banks." },
+          { id: "b", label: "Anyone.", correct: true },
+          { id: "c", label: "Only the project team." }
+        ],
+        explanation:
+          "Public ledgers are open: anyone can verify transactions."
       }
     ]
   },
@@ -139,6 +179,43 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "Connectivity to the internet is the key difference, with a direct impact on security."
+      },
+      {
+        id: "q2",
+        prompt: "A wallet stores your private keys.",
+        kind: "boolean",
+        choices: [
+          { id: "a", label: "True", correct: true },
+          { id: "b", label: "False" }
+        ],
+        explanation:
+          "Wallets hold keys, not coins."
+      },
+      {
+        id: "q3",
+        prompt: "Which setup is safer for long-term storage?",
+        choices: [
+          { id: "a", label: "A hot wallet only." },
+          { id: "b", label: "A cold wallet.", correct: true },
+          { id: "c", label: "Sharing your seed phrase." }
+        ],
+        explanation:
+          "Cold wallets are offline and reduce exposure to online attacks."
+      },
+      {
+        id: "q4",
+        prompt: "What is a custodial wallet?",
+        choices: [
+          { id: "a", label: "You hold the keys." },
+          {
+            id: "b",
+            label: "A third party holds your keys.",
+            correct: true
+          },
+          { id: "c", label: "A wallet with no password." }
+        ],
+        explanation:
+          "Custodial wallets are managed by a provider (e.g., a CEX)."
       }
     ],
     mission: {
@@ -178,6 +255,40 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "CEXs are more guided and offer support, which helps at the beginning."
+      },
+      {
+        id: "q2",
+        prompt: "On a DEX, the exchange holds your keys.",
+        kind: "boolean",
+        trick: true,
+        choices: [
+          { id: "a", label: "True" },
+          { id: "b", label: "False", correct: true }
+        ],
+        explanation:
+          "On a DEX, you keep custody through your wallet."
+      },
+      {
+        id: "q3",
+        prompt: "What should you always check before trading?",
+        choices: [
+          { id: "a", label: "That the URL is correct.", correct: true },
+          { id: "b", label: "That the logo is pretty." },
+          { id: "c", label: "That there are no fees." }
+        ],
+        explanation:
+          "Fake sites are common. Always verify the URL and fees."
+      },
+      {
+        id: "q4",
+        prompt: "Which option gives you more autonomy?",
+        choices: [
+          { id: "a", label: "CEX." },
+          { id: "b", label: "DEX.", correct: true },
+          { id: "c", label: "Email login." }
+        ],
+        explanation:
+          "DEXs let you keep custody and interact directly with contracts."
       }
     ],
     mission: {
@@ -214,6 +325,43 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "A seed phrase is never shared. Real support will not ask for it."
+      },
+      {
+        id: "q2",
+        prompt: "Using 2FA reduces the risk on a CEX account.",
+        kind: "boolean",
+        choices: [
+          { id: "a", label: "True", correct: true },
+          { id: "b", label: "False" }
+        ],
+        explanation:
+          "2FA adds a protective layer beyond the password."
+      },
+      {
+        id: "q3",
+        prompt: "Why is checking the URL critical?",
+        choices: [
+          { id: "a", label: "To see cool animations." },
+          {
+            id: "b",
+            label: "To avoid phishing sites.",
+            correct: true
+          },
+          { id: "c", label: "Because it speeds up the network." }
+        ],
+        explanation:
+          "Most wallet drains happen through fake websites."
+      },
+      {
+        id: "q4",
+        prompt: "Where should you store a seed phrase?",
+        choices: [
+          { id: "a", label: "In a public cloud doc." },
+          { id: "b", label: "Offline, on paper.", correct: true },
+          { id: "c", label: "In a DM." }
+        ],
+        explanation:
+          "Offline storage reduces exposure to hacks."
       }
     ]
   },
@@ -245,6 +393,44 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "A test greatly reduces the risk of address or network errors."
+      },
+      {
+        id: "q2",
+        prompt: "You should send a large amount first to test.",
+        kind: "boolean",
+        trick: true,
+        choices: [
+          { id: "a", label: "True" },
+          { id: "b", label: "False", correct: true }
+        ],
+        explanation:
+          "A small test is safer before larger transfers."
+      },
+      {
+        id: "q3",
+        prompt: "Why do fees (gas) matter?",
+        choices: [
+          { id: "a", label: "They are always zero." },
+          {
+            id: "b",
+            label: "They affect how much you receive.",
+            correct: true
+          },
+          { id: "c", label: "They replace the address." }
+        ],
+        explanation:
+          "Fees reduce the final amount and can vary by network."
+      },
+      {
+        id: "q4",
+        prompt: "What is a safe first transfer?",
+        choices: [
+          { id: "a", label: "A very small test amount.", correct: true },
+          { id: "b", label: "All funds at once." },
+          { id: "c", label: "A random amount." }
+        ],
+        explanation:
+          "Small tests reduce the risk of costly mistakes."
       }
     ]
   },
@@ -276,6 +462,39 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "Always verify credibility before engaging your wallet."
+      },
+      {
+        id: "q2",
+        prompt: "A Solana wallet gives access to the ecosystem.",
+        kind: "boolean",
+        choices: [
+          { id: "a", label: "True", correct: true },
+          { id: "b", label: "False" }
+        ],
+        explanation:
+          "A wallet is the gateway to Solana apps and assets."
+      },
+      {
+        id: "q3",
+        prompt: "Which category is part of the Solana ecosystem?",
+        choices: [
+          { id: "a", label: "DeFi and NFTs.", correct: true },
+          { id: "b", label: "None, it's only for payments." },
+          { id: "c", label: "Only social media." }
+        ],
+        explanation:
+          "DeFi, NFTs, gaming, payments, and infra are key categories."
+      },
+      {
+        id: "q4",
+        prompt: "Why follow official announcements?",
+        choices: [
+          { id: "a", label: "To avoid scams and stay updated.", correct: true },
+          { id: "b", label: "To skip security checks." },
+          { id: "c", label: "Because updates don't matter." }
+        ],
+        explanation:
+          "Official channels help you verify real updates and avoid fakes."
       }
     ]
   },
@@ -303,6 +522,40 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "Yield and risk are linked, especially in DeFi."
+      },
+      {
+        id: "q2",
+        prompt: "A very high APY always means low risk.",
+        kind: "boolean",
+        trick: true,
+        choices: [
+          { id: "a", label: "True" },
+          { id: "b", label: "False", correct: true }
+        ],
+        explanation:
+          "High APY usually signals higher risk, especially in DeFi."
+      },
+      {
+        id: "q3",
+        prompt: "Why read smart contract conditions?",
+        choices: [
+          { id: "a", label: "To see the colors." },
+          { id: "b", label: "To understand risks and rules.", correct: true },
+          { id: "c", label: "Because it guarantees profit." }
+        ],
+        explanation:
+          "Conditions explain risks, fees, and how a protocol behaves."
+      },
+      {
+        id: "q4",
+        prompt: "What is a swap?",
+        choices: [
+          { id: "a", label: "A direct exchange between tokens.", correct: true },
+          { id: "b", label: "A loan with zero risk." },
+          { id: "c", label: "A guaranteed profit." }
+        ],
+        explanation:
+          "A swap simply exchanges one token for another."
       }
     ]
   },
@@ -334,6 +587,40 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "Utility and community are the main drivers of value."
+      },
+      {
+        id: "q2",
+        prompt: "The value of an NFT depends only on the image.",
+        kind: "boolean",
+        trick: true,
+        choices: [
+          { id: "a", label: "True" },
+          { id: "b", label: "False", correct: true }
+        ],
+        explanation:
+          "Utility and community are usually the real drivers."
+      },
+      {
+        id: "q3",
+        prompt: "Are royalties always guaranteed?",
+        choices: [
+          { id: "a", label: "Yes, always." },
+          { id: "b", label: "No, it depends on the marketplace.", correct: true },
+          { id: "c", label: "Only on weekends." }
+        ],
+        explanation:
+          "Royalty enforcement varies by marketplace and standards."
+      },
+      {
+        id: "q4",
+        prompt: "What does an NFT prove?",
+        choices: [
+          { id: "a", label: "Ownership of a unique digital asset.", correct: true },
+          { id: "b", label: "Guaranteed profit." },
+          { id: "c", label: "Anonymous identity." }
+        ],
+        explanation:
+          "An NFT is a proof of ownership on-chain."
       }
     ]
   },
@@ -361,6 +648,39 @@ export const lessons: Lesson[] = [
         ],
         explanation:
           "A journal helps analyze your decisions and keep a clear view."
+      },
+      {
+        id: "q2",
+        prompt: "Setting a maximum budget helps limit risk.",
+        kind: "boolean",
+        choices: [
+          { id: "a", label: "True", correct: true },
+          { id: "b", label: "False" }
+        ],
+        explanation:
+          "A max budget keeps exposure under control."
+      },
+      {
+        id: "q3",
+        prompt: "What is a basic risk rule?",
+        choices: [
+          { id: "a", label: "Set a maximum budget.", correct: true },
+          { id: "b", label: "Go all in." },
+          { id: "c", label: "Ignore your plan." }
+        ],
+        explanation:
+          "Defining a max budget keeps your exposure under control."
+      },
+      {
+        id: "q4",
+        prompt: "What should you do when feeling FOMO?",
+        choices: [
+          { id: "a", label: "Stick to your plan.", correct: true },
+          { id: "b", label: "Buy immediately." },
+          { id: "c", label: "Leverage more." }
+        ],
+        explanation:
+          "A plan prevents impulsive decisions."
       }
     ]
   }

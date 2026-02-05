@@ -119,9 +119,27 @@
                  "progressPending":  "Valide tous les quiz pour continuer.",
                  "finish":  "Terminer",
                  "done":  "Module terminé. Retourne au parcours pour voir ta progression.",
+                 "recapTitle":  "Récap",
+                 "recapScore":  "Score : {correct}/{total} bonnes réponses",
+                 "recapNext":  "Prochaines étapes",
+                 "recapBackTrack":  "Retour au parcours",
+                 "recapNextLesson":  "Leçon suivante : {title}",
+                 "recapStatXp":  "XP total",
+                 "recapStatBadges":  "Badges",
+                 "recapStatStreak":  "Série",
+                 "recapBadgesTitle":  "Badges débloqués",
                  "xpCorrect":  "+10 XP pour la bonne réponse",
                  "xpLesson":  "Leçon terminée : +40 XP",
-                 "badgeUnlocked":  "Badge débloqué : {title}"
+                 "badgeUnlocked":  "Badge débloqué : {title}",
+                 "trick":  "Question piege",
+                 "kind":  {
+                              "boolean":  "Vrai/Faux"
+                          },
+                 "difficulty":  {
+                                    "easy":  "Facile",
+                                    "medium":  "Moyen",
+                                    "hard":  "Difficile"
+                                }
              },
     "progress":  {
                      "title":  "Progression",

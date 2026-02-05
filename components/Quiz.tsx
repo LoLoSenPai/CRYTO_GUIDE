@@ -17,10 +17,14 @@ import type { ProgressState } from "@/lib/progress";
 
 export default function Quiz({
   lessonSlug,
-  questions
+  questions,
+  trackHref,
+  nextLesson
 }: {
   lessonSlug: string;
   questions: QuizQuestion[];
+  trackHref?: string;
+  nextLesson?: { title: string; href: string } | null;
 }) {
   const t = useTranslations("quiz");
   const locale = useLocale();
@@ -34,6 +38,12 @@ export default function Quiz({
   const [complete, setComplete] = useState(false);
   const [celebrate, setCelebrate] = useState(false);
   const [celebrationMessage, setCelebrationMessage] = useState<string>("");
+  const [recapStats, setRecapStats] = useState<{
+    xp: number;
+    badges: number;
+    streak: number;
+  } | null>(null);
+  const [recapBadges, setRecapBadges] = useState<string[]>([]);
 
   useEffect(() => {
     const progress = loadProgress();
@@ -51,6 +61,11 @@ export default function Quiz({
     if (!questions.length) return false;
     return questions.every((question) => submitted[question.id]);
   }, [questions, submitted]);
+  const correctCount = useMemo(
+    () => questions.filter((question) => submitted[question.id]).length,
+    [questions, submitted]
+  );
+  const totalCount = questions.length;
 
   useEffect(() => {
     setComplete(allCorrect);
@@ -108,6 +123,18 @@ export default function Quiz({
     updated = applyBadgeRules(updated);
     saveProgress(updated);
 
+    setRecapStats({
+      xp: updated.xp,
+      badges: updated.badges.length,
+      streak: updated.streak
+    });
+    const newlyUnlocked = updated.badges.filter(
+      (badgeId) => !progress.badges.includes(badgeId)
+    );
+    setRecapBadges(
+      newlyUnlocked.map((badgeId) => badgeMap.get(badgeId)?.title ?? badgeId)
+    );
+
     if (!alreadyDone) {
       const badgeShown = announceBadges(progress, updated);
       if (!badgeShown) {
@@ -125,7 +152,17 @@ export default function Quiz({
         message={celebrationMessage}
         onDone={() => setCelebrate(false)}
       />
-      {questions.map((question) => {
+      {questions.map((question, index) => {
+        const derivedDifficulty =
+          question.difficulty ??
+          (index === 0
+            ? "easy"
+            : index === questions.length - 1
+              ? "hard"
+              : "medium");
+        const derivedKind =
+          question.kind ??
+          (question.choices.length === 2 ? "boolean" : "standard");
         const status = submitted[question.id];
         const selected = answers[question.id];
         return (
@@ -133,6 +170,21 @@ export default function Quiz({
             <p className="text-sm uppercase tracking-[0.2em] text-sand-400">
               {t("label")}
             </p>
+            <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-sand-400">
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                {t(`difficulty.${derivedDifficulty}`)}
+              </span>
+              {derivedKind === "boolean" && (
+                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                  {t("kind.boolean")}
+                </span>
+              )}
+              {question.trick && (
+                <span className="rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-amber-200">
+                  {t("trick")}
+                </span>
+              )}
+            </div>
             <h3 className="mt-2 font-display text-xl text-sand-200">
               {question.prompt}
             </h3>
@@ -198,7 +250,116 @@ export default function Quiz({
         </button>
       </div>
       {complete && (
-        <p className="text-sm text-teal-300">{t("done")}</p>
+        <div className="glass relative overflow-hidden rounded-3xl p-5 shadow-glow">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(45,212,191,0.18),transparent_55%)]" />
+          <p className="text-sm uppercase tracking-[0.2em] text-sand-400">
+            {t("recapTitle")}
+          </p>
+          <h4 className="mt-2 font-display text-xl text-sand-200">
+            {t("recapScore", { correct: correctCount, total: totalCount })}
+          </h4>
+          <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-teal-400 via-sky-400 to-amber-300 transition-all"
+              style={{
+                width: `${totalCount ? Math.round((correctCount / totalCount) * 100) : 0}%`
+              }}
+            />
+          </div>
+          <div className="mt-4 grid gap-3 text-sm text-sand-300 sm:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                {t("recapStatXp")}
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-base text-sand-200">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-200 shadow-[0_0_0_rgba(251,191,36,0)] transition hover:shadow-[0_0_18px_rgba(251,191,36,0.45)]">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2l1.8 4.6L18 8.2l-4.2 1.6L12 14l-1.8-4.2L6 8.2l4.2-1.6L12 2z" />
+                  </svg>
+                </span>
+                {recapStats?.xp ?? 0}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                {t("recapStatBadges")}
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-base text-sand-200">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-400/20 text-teal-200 shadow-[0_0_0_rgba(45,212,191,0)] transition hover:shadow-[0_0_18px_rgba(45,212,191,0.45)]">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2l2.2 4.9 5.3.5-4 3.6 1.2 5.2L12 13.9l-4.7 2.3 1.2-5.2-4-3.6 5.3-.5L12 2z" />
+                  </svg>
+                </span>
+                {recapStats?.badges ?? 0}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                {t("recapStatStreak")}
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-base text-sand-200">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-400/20 text-rose-200 shadow-[0_0_0_rgba(244,114,182,0)] transition hover:shadow-[0_0_18px_rgba(244,114,182,0.45)]">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z" />
+                  </svg>
+                </span>
+                {recapStats?.streak ?? 0}
+              </p>
+            </div>
+          </div>
+          {!!recapBadges.length && (
+            <div className="mt-4">
+              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                {t("recapBadgesTitle")}
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {recapBadges.map((badge) => (
+                  <span
+                    key={badge}
+                    className="rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+          <p className="mt-4 text-sm text-sand-300">{t("recapNext")}</p>
+          <div className="mt-3 flex flex-wrap gap-3">
+            {trackHref && (
+              <a
+                href={trackHref}
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-sand-200"
+              >
+                {t("recapBackTrack")}
+              </a>
+            )}
+            {nextLesson && (
+              <a
+                href={nextLesson.href}
+                className="rounded-full bg-teal-400 px-4 py-2 text-xs font-semibold text-night-900"
+              >
+                {t("recapNextLesson", { title: nextLesson.title })}
+              </a>
+            )}
+          </div>
+          <p className="mt-3 text-sm text-teal-300">{t("done")}</p>
+        </div>
       )}
     </div>
   );

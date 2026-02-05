@@ -2,7 +2,7 @@ import { Link } from "@/navigation";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Quiz from "@/components/Quiz";
-import { getLesson } from "@/lib/content";
+import { getLesson, getLessonsByTrack } from "@/lib/content";
 import type { Locale } from "@/i18n.config";
 
 export default async function LessonPage({
@@ -17,6 +17,14 @@ export default async function LessonPage({
   if (!lesson) {
     notFound();
   }
+  const trackLessons = getLessonsByTrack(locale as Locale, lesson.track);
+  const currentIndex = trackLessons.findIndex(
+    (item) => item.slug === lesson.slug
+  );
+  const nextLesson =
+    currentIndex >= 0 && currentIndex < trackLessons.length - 1
+      ? trackLessons[currentIndex + 1]
+      : null;
 
   return (
     <main>
@@ -68,7 +76,19 @@ export default async function LessonPage({
         )}
 
         <div className="mt-10">
-          <Quiz lessonSlug={lesson.slug} questions={lesson.quiz} />
+          <Quiz
+            lessonSlug={lesson.slug}
+            questions={lesson.quiz}
+            trackHref={`/track/${lesson.track}`}
+            nextLesson={
+              nextLesson
+                ? {
+                    title: nextLesson.title,
+                    href: `/lesson/${nextLesson.slug}`
+                  }
+                : null
+            }
+          />
         </div>
       </section>
     </main>
