@@ -8,6 +8,7 @@ export type { Lesson, Track, QuizQuestion, ResourceSection };
 const byLocale = (locale: Locale) => (locale === "en" ? {
   lessons: lessonsEn,
   tracks: tracksEn,
+  resources: resourcesEn,
   getLesson: getLessonEn,
   getLessonsByTrack: getLessonsByTrackEn
 } : {

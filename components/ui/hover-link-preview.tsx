@@ -33,8 +33,6 @@ const HoverLinkPreview: React.FC<HoverLinkPreviewProps> = ({
   const motionRotate = useMotionValue(0);
  
   // Springs for natural movement
-  const springTop = useSpring(motionTop, { stiffness: 300, damping: 30 });
-  const springLeft = useSpring(motionLeft, { stiffness: 300, damping: 30 });
   const springRotate = useSpring(motionRotate, { stiffness: 300, damping: 20 });
  
   // Handlers
@@ -60,9 +58,13 @@ const HoverLinkPreview: React.FC<HoverLinkPreviewProps> = ({
   };
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    setShowPreview(true);
     prevX.current = null;
-    updatePositionFromPoint(e.clientX, e.clientY);
+    const x = e.clientX;
+    const y = e.clientY;
+    updatePositionFromPoint(x, y);
+    motionRotate.set(0);
+    springRotate.set(0);
+    setShowPreview(true);
   };
  
   const handleMouseLeave = () => {
@@ -105,8 +107,8 @@ const HoverLinkPreview: React.FC<HoverLinkPreviewProps> = ({
                   exit={{ opacity: 0, scale: 0.8, y: -10, rotate: 0 }}
                   style={{
                     position: "fixed",
-                    top: springTop,
-                    left: springLeft,
+                    top: motionTop,
+                    left: motionLeft,
                     rotate: springRotate,
                     zIndex: 50,
                     pointerEvents: "none"

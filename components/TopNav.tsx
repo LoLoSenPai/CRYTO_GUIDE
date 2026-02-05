@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import LocaleSwitch from "@/components/LocaleSwitch";
 import { useSession } from "@/lib/useSession";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function TopNav() {
   const t = useTranslations("nav");
@@ -17,11 +18,9 @@ export default function TopNav() {
     "U";
 
   return (
-    <header className="glass sticky top-0 z-20 mx-auto mt-6 flex w-[92%] max-w-6xl items-center justify-between rounded-full px-6 py-3 shadow-glow">
+    <header className="glass sticky top-0 z-20 mx-auto mt-6 flex w-[92%] max-w-6xl items-center justify-between rounded-full px-6 shadow-glow">
       <Link href="/" className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-400/20 text-teal-300">
-          <span className="text-lg font-semibold">CG</span>
-        </div>
+        <Image src="/logo.png" alt="Logo" width={60} height={60} />
         <div>
           <p className="font-display text-sm uppercase tracking-[0.2em] text-sand-300">
             {t("brand")}

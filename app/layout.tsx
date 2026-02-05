@@ -15,9 +15,12 @@ const body = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Crypto Guide | Apprendre sans bruit",
+  title: "Crypto Guide | Learn Crypto with Confidence",
   description:
-    "Un guide clair et gamifié pour comprendre la crypto, choisir ses outils et progresser en sécurité."
+    "A clear and gamified guide to understanding crypto, choosing your tools, and progressing safely.",
+    icons: {
+      icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({
