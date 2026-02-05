@@ -57,7 +57,7 @@ export const tracks: Track[] = [
     title: "Parcours Basique",
     tagline: "Comprendre avant d'agir",
     description:
-      "Les fondamentaux pour saisir l'utilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© de la crypto, choisir un wallet et ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©viter les piÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ges.",
+      "Les fondamentaux pour saisir l'utilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© de la crypto, choisir un wallet et �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©viter les pi�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨ges.",
     lessons: [
       "pourquoi-blockchain",
       "wallets-101",
@@ -68,10 +68,10 @@ export const tracks: Track[] = [
   },
   {
     id: "advanced",
-    title: "Parcours AvancÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©",
+    title: "Parcours Avanc�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©",
     tagline: "Aller plus loin, rester prudent",
     description:
-      "Cas d'usages concrets, lecture d'un ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cosystÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨me et bonnes pratiques pour durer.",
+      "Cas d'usages concrets, lecture d'un �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©cosyst�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨me et bonnes pratiques pour durer.",
     lessons: [
       "solana-ecosystem",
       "defi-essentials",
@@ -87,30 +87,30 @@ export const lessons: Lesson[] = [
     track: "basic",
     title: "Pourquoi la blockchain existe ?",
     summary:
-      "Comprendre le problÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨me que la blockchain rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©sout et ce que cela change concrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨tement.",
+      "Comprendre le probl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨me que la blockchain r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©sout et ce que cela change concr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨tement.",
     duration: "6 min",
     steps: [
-      "Une blockchain est un registre partagÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© que personne ne peut modifier seul.",
-      "Elle permet d'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©changer de la valeur sans intermÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©diaire central.",
-      "Les blockchains publiques sont transparentes : on peut vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier les transactions.",
-      "Les crypto-actifs sont des unitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s qui circulent sur ces registres.",
-      "Le vrai gain : moins de friction, plus de vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifiabilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©, nouveaux usages."
+      "Une blockchain est un registre partag�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© que personne ne peut modifier seul.",
+      "Elle permet d'�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©changer de la valeur sans interm�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©diaire central.",
+      "Les blockchains publiques sont transparentes : on peut v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier les transactions.",
+      "Les crypto-actifs sont des unit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s qui circulent sur ces registres.",
+      "Le vrai gain : moins de friction, plus de v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifiabilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©, nouveaux usages."
     ],
     quiz: [
       {
         id: "q1",
         prompt: "Quel est l'objectif principal d'une blockchain publique ?",
         choices: [
-          { id: "a", label: "CrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©er une base privÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©e pour une entreprise." },
+          { id: "a", label: "Cr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©er une base priv�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©e pour une entreprise." },
           {
             id: "b",
-            label: "Permettre un registre partagÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© sans contrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â´le unique.",
+            label: "Permettre un registre partag�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© sans contr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,´le unique.",
             correct: true
           },
-          { id: "c", label: "EmpÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âªcher toute transaction d'avoir lieu." }
+          { id: "c", label: "Emp�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,ªcher toute transaction d'avoir lieu." }
         ],
         explanation:
-          "Le cÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œur d'une blockchain publique, c'est le registre partagÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifiable par tous."
+          "Le c�f�'�?�?T�f¢â�?s¬�,¦�f�'�,¢�f¢â�,�š�,¬�f�?�â�,��"ur d'une blockchain publique, c'est le registre partag�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifiable par tous."
       },
       {
         id: "q2",
@@ -155,19 +155,19 @@ export const lessons: Lesson[] = [
     slug: "wallets-101",
     track: "basic",
     title: "Wallets : hot, cold, custodian",
-    summary: "Savoir oÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¹ sont stockÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es les clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s et pourquoi ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§a change tout.",
+    summary: "Savoir o�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¹ sont stock�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©es les cl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s et pourquoi �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,§a change tout.",
     duration: "7 min",
     steps: [
-      "Un wallet stocke des clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s, pas des coins : c'est votre accÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨s aux fonds.",
-      "Hot wallet = connectÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©, pratique pour le quotidien.",
-      "Cold wallet = hors ligne, plus sÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â»r pour le long terme.",
-      "Custodial = un tiers garde les clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s (ex: CEX).",
-      "RÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨gle simple : petite somme en hot, grosse somme en cold."
+      "Un wallet stocke des cl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s, pas des coins : c'est votre acc�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨s aux fonds.",
+      "Hot wallet = connect�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©, pratique pour le quotidien.",
+      "Cold wallet = hors ligne, plus s�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,»r pour le long terme.",
+      "Custodial = un tiers garde les cl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s (ex: CEX).",
+      "R�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨gle simple : petite somme en hot, grosse somme en cold."
     ],
     quiz: [
       {
         id: "q1",
-        prompt: "Quelle est la vraie diffÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rence entre hot et cold wallet ?",
+        prompt: "Quelle est la vraie diff�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rence entre hot et cold wallet ?",
         choices: [
           {
             id: "a",
@@ -178,7 +178,7 @@ export const lessons: Lesson[] = [
           { id: "c", label: "Il n'y en a pas." }
         ],
         explanation:
-          "La connexion ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  Internet est la diffÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rence clÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©, avec un impact direct sur la sÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©curitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©."
+          "La connexion �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  Internet est la diff�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rence cl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©, avec un impact direct sur la s�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©curit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©."
       },
       {
         id: "q2",
@@ -227,30 +227,30 @@ export const lessons: Lesson[] = [
     track: "basic",
     title: "CEX vs DEX",
     summary:
-      "Comprendre la diffÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rence entre plateformes centralisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es et ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©changes dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©centralisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s.",
+      "Comprendre la diff�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rence entre plateformes centralis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©es et �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©changes d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©centralis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s.",
     duration: "6 min",
     steps: [
-      "Un CEX (centralisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©) ressemble ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  une banque : compte, support, KYC.",
-      "Un DEX (dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©centralisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©) fonctionne via smart contracts et votre wallet.",
+      "Un CEX (centralis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©) ressemble �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  une banque : compte, support, KYC.",
+      "Un DEX (d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©centralis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©) fonctionne via smart contracts et votre wallet.",
       "CEX = simple, DEX = plus autonome et transparent.",
-      "Toujours vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier les frais et l'authenticitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© du site utilisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©.",
-      "Commencer par un CEX peut ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âªtre plus rassurant pour un dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©butant."
+      "Toujours v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier les frais et l'authenticit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© du site utilis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©.",
+      "Commencer par un CEX peut �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,ªtre plus rassurant pour un d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©butant."
     ],
     quiz: [
       {
         id: "q1",
-        prompt: "Quel est l'avantage principal d'un CEX pour un dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©butant ?",
+        prompt: "Quel est l'avantage principal d'un CEX pour un d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©butant ?",
         choices: [
           { id: "a", label: "Pas besoin de compte." },
           {
             id: "b",
-            label: "Interface guidÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©e et support client.",
+            label: "Interface guid�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©e et support client.",
             correct: true
           },
           { id: "c", label: "Aucun frais sur les transactions." }
         ],
         explanation:
-          "Les CEX sont plus guidÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s et proposent un support, utile au dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©but."
+          "Les CEX sont plus guid�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s et proposent un support, utile au d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©but."
       },
       {
         id: "q2",
@@ -288,24 +288,24 @@ export const lessons: Lesson[] = [
       }
     ],
     mission: {
-      title: "Mission : crÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©er un compte CEX",
+      title: "Mission : cr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©er un compte CEX",
       description:
-        "Ouvre un compte sur un exchange fiable pour accÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©der ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  l'achat/vente de crypto.",
-      ctaLabel: "CrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©er un compte Binance",
+        "Ouvre un compte sur un exchange fiable pour acc�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©der �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  l'achat/vente de crypto.",
+      ctaLabel: "Cr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©er un compte Binance",
       ctaHref: "https://www.binance.com/?ref=YOUR_REF",
       disclaimer:
-        "Lien affiliÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© possible. Rien d'obligatoire : choisis la plateforme qui te convient."
+        "Lien affili�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© possible. Rien d'obligatoire : choisis la plateforme qui te convient."
     }
   },
   {
     slug: "securite",
     track: "basic",
-    title: "SÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©curitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© de base",
-    summary: "Les rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨gles simples qui ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©vitent 90% des problÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨mes.",
+    title: "S�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©curit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© de base",
+    summary: "Les r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨gles simples qui �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©vitent 90% des probl�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨mes.",
     duration: "5 min",
     steps: [
-      "Ne partage jamais ta seed phrase, mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Âªme avec un 'support'.",
-      "Toujours vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier l'URL avant de connecter un wallet.",
+      "Ne partage jamais ta seed phrase, m�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,ªme avec un 'support'.",
+      "Toujours v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier l'URL avant de connecter un wallet.",
       "Utiliser 2FA pour les comptes CEX.",
       "Garder un carnet offline pour les infos sensibles.",
       "Ne jamais signer une transaction incomprise."
@@ -360,12 +360,12 @@ export const lessons: Lesson[] = [
   {
     slug: "premiere-transaction",
     track: "basic",
-    title: "PremiÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨re transaction",
+    title: "Premi�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨re transaction",
     summary: "Faire une petite transaction test pour comprendre le workflow.",
     duration: "6 min",
     steps: [
       "Commencer par une petite somme symbolique.",
-      "VÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier le rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©seau utilisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© (ex: Solana) et l'adresse.",
+      "V�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier le r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©seau utilis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© (ex: Solana) et l'adresse.",
       "Comprendre les frais (gas).",
       "Toujours faire un test avant d'envoyer plus.",
       "Conserver un historique de ses transactions."
@@ -378,13 +378,13 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Pour augmenter les frais." },
           {
             id: "b",
-            label: "Pour valider l'adresse et le rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©seau.",
+            label: "Pour valider l'adresse et le r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©seau.",
             correct: true
           },
           { id: "c", label: "Parce que c'est obligatoire." }
         ],
         explanation:
-          "Un test rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©duit drastiquement le risque d'erreur d'adresse ou de rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©seau."
+          "Un test r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©duit drastiquement le risque d'erreur d'adresse ou de r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©seau."
       },
       {
         id: "q2",
@@ -429,15 +429,15 @@ export const lessons: Lesson[] = [
   {
     slug: "solana-ecosystem",
     track: "advanced",
-    title: "Explorer l'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cosystÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨me Solana",
-    summary: "Outils, wallets, et catÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©gories d'apps utiles.",
+    title: "Explorer l'�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©cosyst�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨me Solana",
+    summary: "Outils, wallets, et cat�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©gories d'apps utiles.",
     duration: "8 min",
     steps: [
-      "Solana est optimisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©e pour la vitesse et des frais bas.",
-      "Un wallet Solana te donne accÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨s ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  tout l'ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cosystÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨me.",
-      "CatÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©gories: DeFi, NFT, gaming, payments, infra.",
-      "VÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier la rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©putation d'une dApp avant d'interagir.",
-      "Suivre les annonces officielles pour rester ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  jour."
+      "Solana est optimis�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©e pour la vitesse et des frais bas.",
+      "Un wallet Solana te donne acc�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨s �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  tout l'�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©cosyst�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨me.",
+      "Cat�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©gories: DeFi, NFT, gaming, payments, infra.",
+      "V�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier la r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©putation d'une dApp avant d'interagir.",
+      "Suivre les annonces officielles pour rester �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  jour."
     ],
     quiz: [
       {
@@ -447,13 +447,13 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Ignorer l'URL." },
           {
             id: "b",
-            label: "VÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier sa rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©putation et ses avis.",
+            label: "V�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier sa r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©putation et ses avis.",
             correct: true
           },
           { id: "c", label: "Utiliser tous ses fonds d'un coup." }
         ],
         explanation:
-          "Toujours vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier la crÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©dibilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© avant d'engager son wallet."
+          "Toujours v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier la cr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©dibilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© avant d'engager son wallet."
       },
       {
         id: "q2",
@@ -494,26 +494,26 @@ export const lessons: Lesson[] = [
     slug: "defi-essentials",
     track: "advanced",
     title: "DeFi essentials",
-    summary: "Comprendre swaps, pools, et rendements sans se faire piÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ger.",
+    summary: "Comprendre swaps, pools, et rendements sans se faire pi�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©ger.",
     duration: "9 min",
     steps: [
-      "Un swap = ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©change direct entre tokens.",
-      "Les pools de liquiditÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© permettent les ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©changes mais comportent des risques.",
-      "APY ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©levÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© = risque ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©levÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©. Toujours lire les conditions.",
+      "Un swap = �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©change direct entre tokens.",
+      "Les pools de liquidit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© permettent les �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©changes mais comportent des risques.",
+      "APY �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©lev�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© = risque �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©lev�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©. Toujours lire les conditions.",
       "Les smart contracts peuvent avoir des failles.",
-      "Diversifier ses activitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s limite la casse en cas d'incident."
+      "Diversifier ses activit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s limite la casse en cas d'incident."
     ],
     quiz: [
       {
         id: "q1",
-        prompt: "Un APY trÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨s ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©levÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© signifie souvent...",
+        prompt: "Un APY tr�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¨s �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©lev�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© signifie souvent...",
         choices: [
           { id: "a", label: "Aucun risque." },
           { id: "b", label: "Plus de risques.", correct: true },
           { id: "c", label: "Une garantie absolue." }
         ],
         explanation:
-          "Rendement et risque sont liÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©s, surtout en DeFi."
+          "Rendement et risque sont li�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©s, surtout en DeFi."
       },
       {
         id: "q2",
@@ -558,27 +558,27 @@ export const lessons: Lesson[] = [
     summary: "Comprendre la valeur, l'usage et les limites des NFTs.",
     duration: "7 min",
     steps: [
-      "Un NFT prouve la propriÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©tÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© d'un actif numÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rique unique.",
-      "La valeur dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©pend de l'utilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©, pas seulement de l'image.",
+      "Un NFT prouve la propri�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©t�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© d'un actif num�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rique unique.",
+      "La valeur d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©pend de l'utilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©, pas seulement de l'image.",
       "Les royalties ne sont pas toujours garanties selon la marketplace.",
-      "Toujours vÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rifier l'authenticitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© d'une collection.",
-      "Utiliser un wallet dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©diÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© peut limiter les risques."
+      "Toujours v�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rifier l'authenticit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© d'une collection.",
+      "Utiliser un wallet d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©di�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© peut limiter les risques."
     ],
     quiz: [
       {
         id: "q1",
-        prompt: "La valeur d'un NFT dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©pend surtout...",
+        prompt: "La valeur d'un NFT d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©pend surtout...",
         choices: [
           { id: "a", label: "Du hasard." },
           {
             id: "b",
-            label: "De l'utilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© et de la communautÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©.",
+            label: "De l'utilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© et de la communaut�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©.",
             correct: true
           },
           { id: "c", label: "Du nombre de pixels." }
         ],
         explanation:
-          "L'utilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© et la communautÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© sont les moteurs principaux de valeur."
+          "L'utilit�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© et la communaut�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,© sont les moteurs principaux de valeur."
       },
       {
         id: "q2",
@@ -623,27 +623,27 @@ export const lessons: Lesson[] = [
   {
     slug: "risk-management",
     track: "advanced",
-    title: "GÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©rer ses risques",
-    summary: "Rester lucide et bÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢tir un plan long terme.",
+    title: "G�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©rer ses risques",
+    summary: "Rester lucide et b�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,¢tir un plan long terme.",
     duration: "6 min",
     steps: [
-      "Toujours dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©finir un budget maximum.",
-      "ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°viter l'effet FOMO en restant sur son plan.",
-      "SÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©parer long terme et court terme.",
+      "Toujours d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©finir un budget maximum.",
+      "�f�'�?�?T�f�?�â�,��"��f�'�,¢�f¢â�,�š�,¬�f�?s�,°viter l'effet FOMO en restant sur son plan.",
+      "S�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©parer long terme et court terme.",
       "Ne pas tout mettre sur un seul actif.",
-      "Tenir un journal simple de ses actions aide ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  progresser."
+      "Tenir un journal simple de ses actions aide �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  progresser."
     ],
     quiz: [
       {
         id: "q1",
-        prompt: "Quel est un bon rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©flexe pour limiter les erreurs ?",
+        prompt: "Quel est un bon r�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©flexe pour limiter les erreurs ?",
         choices: [
           { id: "a", label: "Investir en urgence." },
-          { id: "b", label: "Tenir un journal de dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©cisions.", correct: true },
+          { id: "b", label: "Tenir un journal de d�f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,©cisions.", correct: true },
           { id: "c", label: "Changer d'avis chaque jour." }
         ],
         explanation:
-          "Un journal aide ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  analyser ses choix et garder une vision claire."
+          "Un journal aide �f�'�?�?T�f�?�â�,��"��f�'â�,�š�f�?s�,  analyser ses choix et garder une vision claire."
       },
       {
         id: "q2",
