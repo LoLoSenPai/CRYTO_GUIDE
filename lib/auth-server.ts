@@ -23,8 +23,11 @@ export async function getServerSession(): Promise<SessionData | null> {
 
   const result = (await auth.api.getSession({
     headers: new Headers({ cookie: cookieHeader })
-  })) as SessionPayload | { response: SessionPayload };
+  })) as SessionPayload | { response: SessionPayload } | null;
 
+  if (!result) {
+    return null;
+  }
   const payload = "response" in result ? result.response : result;
   if (!payload) return null;
   if ("data" in payload && payload.data) {
@@ -58,7 +61,10 @@ export async function getUserAccounts() {
 
   const result = (await auth.api.listUserAccounts({
     headers: new Headers({ cookie: cookieHeader })
-  })) as AccountRecord[] | { response: AccountRecord[] };
+  })) as AccountRecord[] | { response: AccountRecord[] } | null;
 
+  if (!result) {
+    return [];
+  }
   return "response" in result ? result.response : result;
 }
