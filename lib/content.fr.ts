@@ -57,7 +57,7 @@ export const tracks: Track[] = [
     title: "Parcours Basique",
     tagline: "Comprendre avant d'agir",
     description:
-      "Les fondamentaux pour saisir l'utilité de la crypto, choisir un wallet et éviter les piéges.",
+      "Les fondamentaux pour saisir l'utilité de la crypto, choisir un wallet et éviter les pièges.",
     lessons: [
       "pourquoi-blockchain",
       "wallets-101",
@@ -71,7 +71,7 @@ export const tracks: Track[] = [
     title: "Parcours Avancé",
     tagline: "Aller plus loin, rester prudent",
     description:
-      "Cas d'usages concrets, lecture d'un écosystéme et bonnes pratiques pour durer.",
+      "Cas d'usages concrets, lecture d'un écosystème et bonnes pratiques pour durer.",
     lessons: [
       "solana-ecosystem",
       "defi-essentials",
@@ -85,9 +85,9 @@ export const lessons: Lesson[] = [
   {
     slug: "pourquoi-blockchain",
     track: "basic",
-    title: "Pourquoi la blockchain existe ?",
+    title: "Pourquoi la blockchain éxiste ?",
     summary:
-      "Comprendre le probléme que la blockchain résout et ce que cela change concrétement.",
+      "Comprendre le problème que la blockchain résout et ce que cela change concrètement.",
     duration: "6 min",
     steps: [
       "Une blockchain est un registre partagé que personne ne peut modifier seul.",
@@ -295,10 +295,10 @@ export const lessons: Lesson[] = [
     slug: "securite",
     track: "basic",
     title: "Sécurité de base",
-    summary: "Les régles simples qui évitent 90% des problémes.",
+    summary: "Les règles simples qui évitent 90% des problèmes.",
     duration: "5 min",
     steps: [
-      "Ne partage jamais ta seed phrase, méme avec un 'support'.",
+      "Ne partage jamais ta seed phrase, même avec un 'support'.",
       "Toujours vérifier l'URL avant de connecter un wallet.",
       "Utiliser 2FA pour les comptes CEX.",
       "Garder un carnet offline pour les infos sensibles.",
@@ -332,18 +332,18 @@ export const lessons: Lesson[] = [
         prompt: "Que faut-il verifier avant de connecter un wallet ?",
         choices: [
           { id: "a", label: "L'URL du site.", correct: true },
-          { id: "b", label: "Le fond d'ecran." },
+          { id: "b", label: "Le fond d'écran." },
           { id: "c", label: "Les emojis." },
         ],
         explanation: "Verifier l'URL reduit les risques de phishing.",
       },
       {
         id: "q4",
-        prompt: "Ou conserver une seed phrase ?",
+        prompt: "Où conserver une seed phrase ?",
         choices: [
           { id: "a", label: "Dans un doc cloud public." },
           { id: "b", label: "Hors ligne, sur papier.", correct: true },
-          { id: "c", label: "Dans un message prive." },
+          { id: "c", label: "Dans un message privé." },
         ],
         explanation: "Le stockage hors ligne limite les risques de hack.",
       },
@@ -396,13 +396,13 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Ils sont toujours a zero." },
           {
             id: "b",
-            label: "Ils reduisent le montant recu.",
+            label: "Ils réduisent le montant reçu.",
             correct: true,
           },
           { id: "c", label: "Ils changent l'adresse." },
         ],
         explanation:
-          "Les frais impactent le montant final et varient selon le reseau.",
+          "Les frais impactent le montant final et varient selon le réseau.",
       },
       {
         id: "q4",
@@ -410,24 +410,24 @@ export const lessons: Lesson[] = [
         choices: [
           { id: "a", label: "Un tout petit test.", correct: true },
           { id: "b", label: "Tous les fonds." },
-          { id: "c", label: "Un montant aleatoire." },
+          { id: "c", label: "Un montant aléatoire." },
         ],
-        explanation: "Un test limite les erreurs couteuses.",
+        explanation: "Un test limite les erreurs coûteuses.",
       },
     ],
   },
   {
     slug: "solana-ecosystem",
     track: "advanced",
-    title: "Explorer l'écosystéme Solana",
+    title: "Explorer l'écosystème Solana",
     summary: "Outils, wallets, et catégories d'apps utiles.",
     duration: "8 min",
     steps: [
       "Solana est optimisée pour la vitesse et des frais bas.",
-      "Un wallet Solana te donne accés é tout l'écosystéme.",
+      "Un wallet Solana te donne accès à tout l'écosystème.",
       "Catégories: DeFi, NFT, gaming, payments, infra.",
       "Vérifier la réputation d'une dApp avant d'interagir.",
-      "Suivre les annonces officielles pour rester é jour.",
+      "Suivre les annonces officielles pour rester à jour.",
     ],
     quiz: [
       {
@@ -447,25 +447,25 @@ export const lessons: Lesson[] = [
       },
       {
         id: "q2",
-        prompt: "Un wallet Solana donne acces a l'ecosysteme.",
+        prompt: "Un wallet Solana donne accès à l'écosystème.",
         kind: "boolean",
         choices: [
           { id: "a", label: "Vrai", correct: true },
           { id: "b", label: "Faux" },
         ],
         explanation:
-          "Le wallet est la porte d'entree des apps et actifs Solana.",
+          "Le wallet est la porte d'entrée des apps et actifs Solana.",
       },
       {
         id: "q3",
-        prompt: "Quelle categorie fait partie de l'ecosysteme ?",
+        prompt: "Quelle catégorie fait partie de l'écosystème ?",
         choices: [
           { id: "a", label: "DeFi et NFTs.", correct: true },
           { id: "b", label: "Aucune, seulement les paiements." },
           { id: "c", label: "Uniquement reseaux sociaux." },
         ],
         explanation:
-          "DeFi, NFTs, gaming, payments et infra sont des categories cles.",
+          "DeFi, NFTs, gaming, payments et infra sont des catégories clés.",
       },
       {
         id: "q4",
@@ -473,13 +473,13 @@ export const lessons: Lesson[] = [
         choices: [
           {
             id: "a",
-            label: "Eviter les arnaques et rester a jour.",
+            label: "Eviter les arnaques et rester à jour.",
             correct: true,
           },
-          { id: "b", label: "Pour sauter la securite." },
-          { id: "c", label: "Parce que ca ne change rien." },
+          { id: "b", label: "Pour sauter la sécurité." },
+          { id: "c", label: "Parce que ça ne change rien." },
         ],
-        explanation: "Les canaux officiels aident a verifier les vraies infos.",
+        explanation: "Les canaux officiels aident à vérifier les vraies infos.",
       },
     ],
   },
@@ -516,7 +516,7 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Vrai" },
           { id: "b", label: "Faux", correct: true },
         ],
-        explanation: "Un APY eleve signale souvent plus de risque.",
+        explanation: "Un APY élevé signale souvent plus de risque.",
       },
       {
         id: "q3",
@@ -525,10 +525,10 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Pour les couleurs." },
           {
             id: "b",
-            label: "Pour comprendre risques et regles.",
+            label: "Pour comprendre risques et règles.",
             correct: true,
           },
-          { id: "c", label: "Parce que ca garantit un profit." },
+          { id: "c", label: "Parce que ça garantit un profit." },
         ],
         explanation:
           "Les conditions expliquent les risques, frais et comportements.",
@@ -537,12 +537,12 @@ export const lessons: Lesson[] = [
         id: "q4",
         prompt: "Qu'est-ce qu'un swap ?",
         choices: [
-          { id: "a", label: "Un echange direct entre tokens.", correct: true },
-          { id: "b", label: "Un pret sans risque." },
+          { id: "a", label: "Un échange direct entre tokens.", correct: true },
+          { id: "b", label: "Un prêt sans risque." },
           { id: "c", label: "Un profit garanti." },
         ],
         explanation:
-          "Un swap est un echange simple d'un token contre un autre.",
+          "Un swap est un échange simple d'un token contre un autre.",
       },
     ],
   },
@@ -584,7 +584,7 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Vrai" },
           { id: "b", label: "Faux", correct: true },
         ],
-        explanation: "L'utilite et la communaute comptent le plus souvent.",
+        explanation: "L'utilité et la communauté comptent le plus souvent.",
       },
       {
         id: "q3",
@@ -593,7 +593,7 @@ export const lessons: Lesson[] = [
           { id: "a", label: "Oui, toujours." },
           {
             id: "b",
-            label: "Non, cela depend de la marketplace.",
+            label: "Non, cela dépend de la marketplace.",
             correct: true,
           },
           { id: "c", label: "Seulement le week-end." },
@@ -607,13 +607,13 @@ export const lessons: Lesson[] = [
         choices: [
           {
             id: "a",
-            label: "La propriete d'un actif numerique unique.",
+            label: "La propriété d'un actif numérique unique.",
             correct: true,
           },
           { id: "b", label: "Un profit garanti." },
-          { id: "c", label: "Une identite anonyme." },
+          { id: "c", label: "Une identité anonyme." },
         ],
-        explanation: "Un NFT est une preuve de propriete on-chain.",
+        explanation: "Un NFT est une preuve de propriété on-chain.",
       },
     ],
   },
