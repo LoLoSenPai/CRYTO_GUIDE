@@ -96,7 +96,11 @@ export default function TopNav() {
                       setMenuOpen(false);
                       fetch("/api/auth/sign-out", {
                         method: "POST",
-                        credentials: "include"
+                        credentials: "include",
+                        headers: {
+                          "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({})
                       }).then(() => window.location.reload());
                     }}
                     className="mt-1 block w-full rounded-xl px-3 py-2 text-left text-sand-200 transition hover:bg-white/5"

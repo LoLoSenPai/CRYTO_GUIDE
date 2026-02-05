@@ -84,18 +84,22 @@ export default async function AccountPage({
             </div>
           </div>
 
-          <form
-            action="/api/auth/sign-out"
-            method="POST"
-            className="mt-6"
+          <button
+            type="button"
+            onClick={() => {
+              fetch("/api/auth/sign-out", {
+                method: "POST",
+                credentials: "include",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({})
+              }).then(() => window.location.assign(`/${locale}/auth`));
+            }}
+            className="mt-6 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-teal-400/60"
           >
-            <button
-              type="submit"
-              className="rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-teal-400/60"
-            >
-              {t("signOut")}
-            </button>
-          </form>
+            {t("signOut")}
+          </button>
         </div>
       </section>
     </main>

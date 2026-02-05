@@ -50,7 +50,11 @@ export default function AuthForm() {
     startTransition(async () => {
       await fetch("/api/auth/sign-out", {
         method: "POST",
-        credentials: "include"
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({})
       });
       window.location.reload();
     });
