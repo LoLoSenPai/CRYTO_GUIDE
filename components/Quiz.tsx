@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import type { QuizQuestion } from "@/lib/content";
 import {
@@ -35,9 +35,12 @@ export default function Quiz({
   );
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState<Record<string, boolean>>({});
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animateIn, setAnimateIn] = useState(false);
   const [complete, setComplete] = useState(false);
   const [celebrate, setCelebrate] = useState(false);
   const [celebrationMessage, setCelebrationMessage] = useState<string>("");
+  const autoAdvanceRef = useRef<number | null>(null);
   const [recapStats, setRecapStats] = useState<{
     xp: number;
     badges: number;
@@ -55,7 +58,21 @@ export default function Quiz({
       }
     });
     setSubmitted(next);
+    const firstIncomplete = questions.findIndex(
+      (question) => !next[question.id]
+    );
+    if (firstIncomplete === -1) {
+      setCurrentIndex(Math.max(0, questions.length - 1));
+    } else {
+      setCurrentIndex(firstIncomplete);
+    }
   }, [lessonSlug, questions]);
+
+  useEffect(() => {
+    setAnimateIn(false);
+    const id = requestAnimationFrame(() => setAnimateIn(true));
+    return () => cancelAnimationFrame(id);
+  }, [currentIndex]);
 
   const allCorrect = useMemo(() => {
     if (!questions.length) return false;
@@ -110,6 +127,15 @@ export default function Quiz({
       }
     }
     setSubmitted((prev) => ({ ...prev, [question.id]: isCorrect }));
+
+    if (isCorrect && currentIndex < totalCount - 1) {
+      if (autoAdvanceRef.current) {
+        window.clearTimeout(autoAdvanceRef.current);
+      }
+      autoAdvanceRef.current = window.setTimeout(() => {
+        setCurrentIndex((prev) => Math.min(prev + 1, totalCount - 1));
+      }, 800);
+    }
   };
 
   const handleComplete = () => {
@@ -152,12 +178,13 @@ export default function Quiz({
         message={celebrationMessage}
         onDone={() => setCelebrate(false)}
       />
-      {questions.map((question, index) => {
+      {questions[currentIndex] && (() => {
+        const question = questions[currentIndex];
         const derivedDifficulty =
           question.difficulty ??
-          (index === 0
+          (currentIndex === 0
             ? "easy"
-            : index === questions.length - 1
+            : currentIndex === questions.length - 1
               ? "hard"
               : "medium");
         const derivedKind =
@@ -165,11 +192,25 @@ export default function Quiz({
           (question.choices.length === 2 ? "boolean" : "standard");
         const status = submitted[question.id];
         const selected = answers[question.id];
+
         return (
-          <div key={question.id} className="glass rounded-3xl p-5 shadow-glow">
-            <p className="text-sm uppercase tracking-[0.2em] text-sand-400">
-              {t("label")}
-            </p>
+          <div
+            key={question.id}
+            className={`glass rounded-3xl p-5 shadow-glow transition-all duration-300 ${
+              animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+            }`}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-sand-400">
+                {t("label")}
+              </p>
+              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                {t("questionCount", {
+                  current: currentIndex + 1,
+                  total: totalCount
+                })}
+              </p>
+            </div>
             <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-sand-400">
               <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
                 {t(`difficulty.${derivedDifficulty}`)}
@@ -225,6 +266,27 @@ export default function Quiz({
                   {status ? t("correct") : t("retry")}
                 </p>
               )}
+              <button
+                onClick={() =>
+                  setCurrentIndex((prev) => Math.max(prev - 1, 0))
+                }
+                disabled={currentIndex === 0}
+                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-sand-200 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {t("prev")}
+              </button>
+              {status && currentIndex < totalCount - 1 && (
+                <button
+                  onClick={() =>
+                    setCurrentIndex((prev) =>
+                      Math.min(prev + 1, totalCount - 1)
+                    )
+                  }
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-sand-200"
+                >
+                  {t("next")}
+                </button>
+              )}
             </div>
             {status && (
               <p className="mt-3 text-sm text-sand-300">
@@ -233,7 +295,7 @@ export default function Quiz({
             )}
           </div>
         );
-      })}
+      })()}
       <div className="glass flex items-center justify-between rounded-3xl px-6 py-4 shadow-glow">
         <div>
           <p className="text-sm text-sand-300">{t("progressTitle")}</p>

@@ -111,7 +111,10 @@
                },
     "quiz":  {
                  "label":  "Quiz",
+                 "questionCount":  "Question {current}/{total}",
                  "validate":  "Submit",
+                 "next":  "Next question",
+                 "prev":  "Previous",
                  "correct":  "Correct",
                  "retry":  "Try again",
                  "progressTitle":  "Module progress",

@@ -111,7 +111,10 @@
                },
     "quiz":  {
                  "label":  "Quiz",
+                 "questionCount":  "Question {current}/{total}",
                  "validate":  "Valider",
+                 "next":  "Question suivante",
+                 "prev":  "Précédente",
                  "correct":  "Bonne réponse",
                  "retry":  "Réessaie",
                  "progressTitle":  "Progression du module",
