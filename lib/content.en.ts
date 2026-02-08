@@ -21,6 +21,13 @@ export type Lesson = {
   summary: string;
   duration: string;
   steps: string[];
+  learnSections?: {
+    id: string;
+    title: string;
+    body: string;
+    bullets?: string[];
+    note?: string;
+  }[];
   quiz: QuizQuestion[];
   mission?: {
     title: string;
@@ -95,6 +102,41 @@ export const lessons: Lesson[] = [
       "Public blockchains are transparent: anyone can verify transactions.",
       "Crypto assets are units that move on these ledgers.",
       "The real gain: less friction, more verifiability, new use cases."
+    ],
+    learnSections: [
+      {
+        id: "problem",
+        title: "The problem before blockchain",
+        body: "On the internet, copying information is easy. Copying value safely without a central middleman was much harder.",
+        bullets: [
+          "Banks and payment processors were the default trust layer.",
+          "Cross-border transfers were often slow and expensive.",
+          "Users had little visibility into how settlement happened."
+        ],
+        note: "Blockchain is mainly a trust and verification infrastructure."
+      },
+      {
+        id: "how-it-works",
+        title: "What a blockchain changes",
+        body: "A public blockchain provides a shared ledger that many participants verify together instead of one actor controlling it.",
+        bullets: [
+          "Transactions are visible and auditable.",
+          "Rules are applied by protocol logic.",
+          "Ownership can be moved programmatically."
+        ],
+        note: "Not everything should be on-chain. Use it where verifiability matters."
+      },
+      {
+        id: "use-cases",
+        title: "Concrete use cases",
+        body: "Use cases are strongest when users need open access, verifiable records, and programmable transfers.",
+        bullets: [
+          "Global payments and remittances",
+          "Digital ownership (tokens, NFTs)",
+          "Open financial rails (DeFi)"
+        ],
+        note: "Speculation exists, but utility is the long-term foundation."
+      }
     ],
     quiz: [
       {
@@ -239,6 +281,41 @@ export const lessons: Lesson[] = [
       "CEX = simple, DEX = more autonomous and transparent.",
       "Always check fees and the authenticity of the site you use.",
       "Starting with a CEX can feel safer for beginners."
+    ],
+    learnSections: [
+      {
+        id: "difference",
+        title: "Core difference",
+        body: "CEX and DEX both let you trade, but custody and responsibility are not the same.",
+        bullets: [
+          "CEX: platform holds keys, account-based experience.",
+          "DEX: you hold keys, wallet-based experience.",
+          "Both can coexist in one user journey."
+        ],
+        note: "The key question is: who controls the keys?"
+      },
+      {
+        id: "when-to-use",
+        title: "When to use each",
+        body: "Beginners usually start with CEX for onboarding, then use DEX as they gain confidence.",
+        bullets: [
+          "CEX: fiat on-ramp, support, easier first buy.",
+          "DEX: self-custody, token access, on-chain transparency.",
+          "Security habits are required in both cases."
+        ],
+        note: "Use CEX for convenience, DEX for autonomy."
+      },
+      {
+        id: "risk-checklist",
+        title: "Minimal risk checklist",
+        body: "Before each action, run a short checklist to avoid common mistakes.",
+        bullets: [
+          "Verify URL and domain spelling.",
+          "Check network and fees before confirming.",
+          "Never share seed phrase or private key."
+        ],
+        note: "One minute of verification prevents most beginner losses."
+      }
     ],
     quiz: [
       {

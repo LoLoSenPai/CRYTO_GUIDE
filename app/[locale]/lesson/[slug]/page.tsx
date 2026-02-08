@@ -39,16 +39,43 @@ export default async function LessonPage({
           {lesson.title}
         </h1>
         <p className="mt-2 text-sand-300">{lesson.summary}</p>
-        <div className="mt-8 space-y-4">
-          {lesson.steps.map((step, index) => (
-            <div key={step} className="glass rounded-2xl p-4 shadow-glow">
-              <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
-                {t("step")} {index + 1}
-              </p>
-              <p className="mt-2 text-sm text-sand-200">{step}</p>
-            </div>
-          ))}
-        </div>
+        {lesson.learnSections?.length ? (
+          <div className="mt-8 space-y-4">
+            {lesson.learnSections.map((section) => (
+              <div key={section.id} className="glass rounded-2xl p-5 shadow-glow">
+                <h2 className="font-display text-xl text-sand-200">
+                  {section.title}
+                </h2>
+                <p className="mt-2 text-sm text-sand-200">{section.body}</p>
+                {!!section.bullets?.length && (
+                  <ul className="mt-3 space-y-2 text-sm text-sand-300">
+                    {section.bullets.map((item) => (
+                      <li key={item} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {section.note && (
+                  <p className="mt-3 rounded-xl border border-teal-400/30 bg-teal-400/10 px-3 py-2 text-sm text-teal-200">
+                    {section.note}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-8 space-y-4">
+            {lesson.steps.map((step, index) => (
+              <div key={step} className="glass rounded-2xl p-4 shadow-glow">
+                <p className="text-xs uppercase tracking-[0.2em] text-sand-400">
+                  {t("step")} {index + 1}
+                </p>
+                <p className="mt-2 text-sm text-sand-200">{step}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         {lesson.mission && (
           <div className="glass mt-8 rounded-3xl p-5 shadow-glow">

@@ -21,6 +21,13 @@ export type Lesson = {
   summary: string;
   duration: string;
   steps: string[];
+  learnSections?: {
+    id: string;
+    title: string;
+    body: string;
+    bullets?: string[];
+    note?: string;
+  }[];
   quiz: QuizQuestion[];
   mission?: {
     title: string;
@@ -95,6 +102,41 @@ export const lessons: Lesson[] = [
       "Les blockchains publiques sont transparentes : on peut vérifier les transactions.",
       "Les crypto-actifs sont des unités qui circulent sur ces registres.",
       "Le vrai gain : moins de friction, plus de vérifiabilité, nouveaux usages.",
+    ],
+    learnSections: [
+      {
+        id: "problem",
+        title: "Le probleme avant la blockchain",
+        body: "Sur internet, copier de l'information est facile. Copier de la valeur de facon fiable sans intermediaire central etait plus difficile.",
+        bullets: [
+          "Les banques etaient la couche de confiance par defaut.",
+          "Les transferts internationaux pouvaient etre lents et chers.",
+          "Les utilisateurs avaient peu de visibilite sur le reglement."
+        ],
+        note: "La blockchain est surtout une infrastructure de confiance et de verification."
+      },
+      {
+        id: "how-it-works",
+        title: "Ce que la blockchain change",
+        body: "Une blockchain publique est un registre partage verifie collectivement, au lieu d'un controle unique.",
+        bullets: [
+          "Transactions visibles et auditables.",
+          "Regles appliquees par le protocole.",
+          "Propriete numerique transferable par programme."
+        ],
+        note: "Tout ne doit pas etre on-chain. Utilise-la quand la verifiabilite est necessaire."
+      },
+      {
+        id: "use-cases",
+        title: "Cas d'usage concrets",
+        body: "Les cas solides sont ceux qui demandent acces ouvert, traces verifiables et transferts programmables.",
+        bullets: [
+          "Paiements globaux",
+          "Propriete numerique (tokens, NFTs)",
+          "Rails financiers ouverts (DeFi)"
+        ],
+        note: "La speculation existe, mais l'utilite reste la base long terme."
+      }
     ],
     quiz: [
       {
@@ -232,6 +274,41 @@ export const lessons: Lesson[] = [
       "CEX = simple, DEX = plus autonome et transparent.",
       "Toujours vérifier les frais et l'authenticité du site utilisé.",
       "Commencer par un CEX peut étre plus rassurant pour un débutant.",
+    ],
+    learnSections: [
+      {
+        id: "difference",
+        title: "Difference principale",
+        body: "CEX et DEX permettent d'echanger, mais la garde et la responsabilite ne sont pas les memes.",
+        bullets: [
+          "CEX: la plateforme garde les cles.",
+          "DEX: l'utilisateur garde les cles via son wallet.",
+          "Les deux peuvent coexister dans un meme parcours."
+        ],
+        note: "Question centrale: qui controle les cles ?"
+      },
+      {
+        id: "when-to-use",
+        title: "Quand utiliser chaque option",
+        body: "Un debutant commence souvent sur CEX pour la simplicite, puis evolue vers DEX avec plus d'autonomie.",
+        bullets: [
+          "CEX: onboarding fiat, interface guidee, support.",
+          "DEX: self-custody, transparence on-chain, acces tokens.",
+          "Dans les deux cas, hygiene securite obligatoire."
+        ],
+        note: "CEX pour la commodite, DEX pour l'autonomie."
+      },
+      {
+        id: "risk-checklist",
+        title: "Checklist anti-erreurs",
+        body: "Avant chaque action, verifier rapidement les points critiques.",
+        bullets: [
+          "Verifier l'URL exacte.",
+          "Verifier reseau et frais.",
+          "Ne jamais partager seed phrase ou cle privee."
+        ],
+        note: "Une minute de verification evite la plupart des erreurs debutant."
+      }
     ],
     quiz: [
       {
