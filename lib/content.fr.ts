@@ -27,7 +27,16 @@ export type Lesson = {
     body: string;
     bullets?: string[];
     note?: string;
+    media?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    };
   }[];
+  cheatsheet?: {
+    title: string;
+    items: string[];
+  };
   quiz: QuizQuestion[];
   mission?: {
     title: string;
@@ -138,6 +147,14 @@ export const lessons: Lesson[] = [
         note: "La speculation existe, mais l'utilite reste la base long terme."
       }
     ],
+    cheatsheet: {
+      title: "Pense-bete",
+      items: [
+        "Blockchain = registre partage, pas de controle unique.",
+        "Valeur principale = verification + acces ouvert.",
+        "Usage fort = cas qui demandent transparence et traçabilite."
+      ]
+    },
     quiz: [
       {
         id: "q1",
@@ -310,6 +327,14 @@ export const lessons: Lesson[] = [
         note: "Une minute de verification evite la plupart des erreurs debutant."
       }
     ],
+    cheatsheet: {
+      title: "Pense-bete",
+      items: [
+        "CEX = onboarding plus simple, garde par la plateforme.",
+        "DEX = plus d'autonomie, tu gardes les cles.",
+        "Toujours verifier URL, reseau et frais."
+      ]
+    },
     quiz: [
       {
         id: "q1",

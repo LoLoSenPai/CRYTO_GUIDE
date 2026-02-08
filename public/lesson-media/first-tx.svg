@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">First transaction</title>
+  <desc id="d">Transfer flow between two addresses</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081428"/>
+      <stop offset="100%" stop-color="#13314b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#39d2c0" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#39d2c0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#6fa3c7" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect width="1200" height="700" fill="url(#dots)"/>
+  <rect width="1200" height="700" fill="url(#glow)"/>
+  <rect x="160" y="250" width="300" height="190" rx="20" fill="#102740" stroke="#39d2c0" stroke-opacity=".4"/>
+  <rect x="740" y="250" width="300" height="190" rx="20" fill="#102740" stroke="#39d2c0" stroke-opacity=".4"/>
+  <path d="M500 345h200M680 345l-22-22M680 345l-22 22" stroke="#39d2c0" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="220" cy="286" r="10" fill="#39d2c0"/>
+  <circle cx="800" cy="286" r="10" fill="#39d2c0"/>
+</svg>

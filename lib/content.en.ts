@@ -27,7 +27,16 @@ export type Lesson = {
     body: string;
     bullets?: string[];
     note?: string;
+    media?: {
+      src: string;
+      alt: string;
+      caption?: string;
+    };
   }[];
+  cheatsheet?: {
+    title: string;
+    items: string[];
+  };
   quiz: QuizQuestion[];
   mission?: {
     title: string;
@@ -138,6 +147,14 @@ export const lessons: Lesson[] = [
         note: "Speculation exists, but utility is the long-term foundation."
       }
     ],
+    cheatsheet: {
+      title: "Quick cheat sheet",
+      items: [
+        "Blockchain = shared ledger, not controlled by one party.",
+        "Main value = verification + open access.",
+        "Best fit = use cases needing transparent records."
+      ]
+    },
     quiz: [
       {
         id: "q1",
@@ -317,6 +334,14 @@ export const lessons: Lesson[] = [
         note: "One minute of verification prevents most beginner losses."
       }
     ],
+    cheatsheet: {
+      title: "Quick cheat sheet",
+      items: [
+        "CEX = easier onboarding, platform custody.",
+        "DEX = more autonomy, you hold keys.",
+        "Always verify URL, network, and fees."
+      ]
+    },
     quiz: [
       {
         id: "q1",

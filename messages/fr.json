@@ -107,7 +107,8 @@
     "lesson":  {
                    "back":  "← Retour au parcours",
                    "step":  "Étape",
-                   "mission":  "Mission"
+                   "mission":  "Mission",
+                   "noteLabel":  "À retenir"
                },
     "quiz":  {
                  "label":  "Quiz",

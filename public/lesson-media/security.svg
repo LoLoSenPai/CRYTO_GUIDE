@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Security basics</title>
+  <desc id="d">Shield icon and checklist</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081325"/>
+      <stop offset="100%" stop-color="#132d45"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="58%">
+      <stop offset="0%" stop-color="#39d2c0" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#39d2c0" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#6fa3c7" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect width="1200" height="700" fill="url(#dots)"/>
+  <rect width="1200" height="700" fill="url(#glow)"/>
+  <path d="M600 140l220 80v150c0 145-95 250-220 290-125-40-220-145-220-290V220l220-80z" fill="#10253e" stroke="#39d2c0" stroke-opacity=".45"/>
+  <path d="M525 345l55 55 95-95" stroke="#39d2c0" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="190" y="520" width="820" height="24" rx="12" fill="#203750"/>
+  <rect x="190" y="520" width="590" height="24" rx="12" fill="#39d2c0"/>
+</svg>
